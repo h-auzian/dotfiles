@@ -1,0 +1,135 @@
+[
+    // Comments.
+    { "keys": ["ctrl+]"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["ctrl+shift+]"], "command": "toggle_comment", "args": { "block": true } },
+    { "keys": ["ctrl+}"], "command": "toggle_comment", "args": { "block": false } },
+
+    // Build
+    // { "keys": ["alt+e"], "command": "build" },
+    // { "keys": ["alt+shift+e"], "command": "build", "args": {"select": true} },
+    // { "keys": ["ctrl+alt+e"], "command" : "show_panel" , "args" : {"panel": "output.exec"} },
+
+    // Search results
+    // { "keys": ["ctrl+d"], "command": "next_result", "context": [
+    //        {"key": "selector", "operator": "equal", "operand": "text.find-in-files"}
+    //    ]},
+    // { "keys": ["ctrl+shift+d"], "command": "prev_result", "context": [
+    //        {"key": "selector", "operator": "equal", "operand": "text.find-in-files"}
+    //    ]},
+
+    // Up/down movement on context menus.
+    { "keys": ["ctrl+k"], "command": "move", "args": {
+        "by": "lines", "forward": true}, "context":
+            { "key": "overlay_visible", "operator": "equal", "operand": true
+        }
+    },
+    { "keys": ["ctrl+i"], "command": "move", "args": {
+        "by": "lines", "forward": false}, "context": {
+            "key": "overlay_visible", "operator": "equal", "operand": true
+        }
+    },
+
+    // Forward/backward movement on widgets.
+    { "keys": ["alt+s"], "command": "jump_back", "context": [
+        { "key": "setting.is_widget", "operator": "equal", "operand": false }
+    ]},
+    { "keys": ["alt+w"], "command": "jump_forward", "context": [
+        { "key": "setting.is_widget", "operator": "equal", "operand": false }
+    ]},
+
+    // Selection.
+    { "keys": ["alt+shift+a"], "command": "find_all_under" },
+    { "keys": ["alt+shift+j"], "command": "find_under_expand" },
+    { "keys": ["alt+shift+i"], "command": "select_lines", "args": {"forward": false} },
+    { "keys": ["alt+shift+k"], "command": "select_lines", "args": {"forward": true} },
+
+    // Tabs.
+    { "keys": ["ctrl+alt+s"], "command": "save_all" },
+    { "keys": ["ctrl+alt+w"], "command": "close_all" },
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+
+    // alt+q - Project and file navigation.
+    { "keys": ["alt+q", "alt+q"], "command": "project_manager", "args": {"action": "switch"} },
+    { "keys": ["alt+q", "alt+e"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"} },
+    { "keys": ["alt+q", "alt+d"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+    { "keys": ["alt+q", "alt+a"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": false }]},
+    { "keys": ["alt+q", "alt+w"], "command": "reopen_last_file" },
+    { "keys": ["alt+q", "alt+s"], "command": "goto_symbol_in_project" },
+    { "keys": ["alt+q", "alt+c"], "command": "copy_project_path_to_clipboard" },
+    { "keys": ["alt+q", "q"], "command": "project_manager", "args": {"action": "new"} },
+    { "keys": ["alt+q", "d"], "command": "goto_definition" },
+    { "keys": ["alt+q", "f"], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]} },
+    { "keys": ["alt+q", "x"], "command": "test_switcher" },
+
+    // alt+e - Code folding.
+    { "keys": ["alt+e", "alt+w"], "command": "fold" },
+    { "keys": ["alt+e", "alt+s"], "command": "unfold" },
+    { "keys": ["alt+e", "|"], "command": "unfold_all" },
+    { "keys": ["alt+e", "0"], "command": "unfold_all" },
+    { "keys": ["alt+e", "1"], "command": "fold_by_level", "args": {"level": 1} },
+    { "keys": ["alt+e", "2"], "command": "fold_by_level", "args": {"level": 2} },
+    { "keys": ["alt+e", "3"], "command": "fold_by_level", "args": {"level": 3} },
+    { "keys": ["alt+e", "4"], "command": "fold_by_level", "args": {"level": 4} },
+    { "keys": ["alt+e", "5"], "command": "fold_by_level", "args": {"level": 5} },
+    { "keys": ["alt+e", "6"], "command": "fold_by_level", "args": {"level": 6} },
+    { "keys": ["alt+e", "7"], "command": "fold_by_level", "args": {"level": 7} },
+    { "keys": ["alt+e", "8"], "command": "fold_by_level", "args": {"level": 8} },
+    { "keys": ["alt+e", "9"], "command": "fold_by_level", "args": {"level": 9} },
+
+    // alt+a - Columns
+    // { "keys": ["alt+a", "1"], "command": "set_layout", "args": { "cols": [0.0, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1]] }},
+    // { "keys": ["alt+a", "2"], "command": "set_layout", "args": { "cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]] }},
+    // { "keys": ["alt+a", "3"], "command": "set_layout", "args": { "cols": [0.0, 0.3, 0.6, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]] }},
+    // { "keys": ["alt+a", "alt+q"], "command": "move_to_group", "args": { "group": 0 } },
+    // { "keys": ["alt+a", "alt+e"], "command": "move_to_group", "args": { "group": 1 } },
+    // { "keys": ["alt+a", "7"], "command": "focus_group", "args": { "group": 0 } },
+    // { "keys": ["alt+a", "9"], "command": "focus_group", "args": { "group": 1 } },
+
+    // alt+d - Misc functions.
+    { "keys": ["alt+d", "alt+d"], "command": "set_mark", "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": false }]},
+    { "keys": ["alt+d", "alt+a"], "command": "select_to_mark", "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": false }]},
+    { "keys": ["alt+d", "alt+c"], "command": "close_tag" },
+    // { "keys": ["alt+d", "alt+w"], "command": "upper_case" },
+    // { "keys": ["alt+d", "alt+s"], "command": "lower_case" },
+    { "keys": ["alt+d", "|"], "command": "toggle_tabs" },
+
+    // RESTer.
+    { "keys": ["alt+f"], "command": "rester_http_request" },
+
+    // Other.
+    { "keys": ["ctrl+shift+|"], "command": "toggle_menu" },
+    { "keys": ["ctrl+l"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
+    { "keys": ["f1"], "command": "toggle_setting", "args": {"setting": "spell_check"} },
+    { "keys": ["f2"], "command": "next_misspelling" },
+    { "keys": ["ctrl+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+    { "keys": ["ctrl+enter"], "command": "replace_next" },
+    { "keys": ["alt+v"], "command": "toggle_preserve_case", "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": true }]},
+    { "keys": ["ctrl+¿"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+    { "keys": ["alt+backspace"], "command": "right_delete" },
+    { "keys": ["ctrl+|"], "command": "toggle_side_bar" },
+    { "keys": ["ctrl+d"], "command": "goto_definition" },
+    { "keys": ["ctrl+alt+d"], "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]} },
+
+    // Unmappings (to avoid conflicts with custom mappings).
+    { "keys": ["ctrl+j"], "command": "" },
+
+    // Neovintageous.
+    { "keys": ["j", "k"], "command": "nv_enter_normal_mode", "args": {"mode": "mode_insert"}, "context": [{"key": "vi_insert_mode_aware"}] },
+
+    // LSP.
+    { "keys": ["ctrl+alt+d"], "command": "lsp_symbol_definition", "context": [{"key": "setting.lsp_active"}]},
+
+    // Origami.
+    { "keys": ["alt+a", "i"], "command": "travel_to_pane", "args": {"direction": "up"} },
+    { "keys": ["alt+a", "j"], "command": "travel_to_pane", "args": {"direction": "left"} },
+    { "keys": ["alt+a", "k"], "command": "travel_to_pane", "args": {"direction": "down"} },
+    { "keys": ["alt+a", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+    { "keys": ["alt+a", "shift+i"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+    { "keys": ["alt+a", "shift+j"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+    { "keys": ["alt+a", "shift+k"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+    { "keys": ["alt+a", "shift+l"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+    { "keys": ["alt+a", "x"], "command": "destroy_pane", "args": {"direction": "self"} },
+    { "keys": ["alt+a", "alt+z"], "command": "zoom_pane", "args": {"fraction": 0.9} },
+    { "keys": ["alt+a", "alt+c"], "command": "unzoom_pane", "args": {} },
+]

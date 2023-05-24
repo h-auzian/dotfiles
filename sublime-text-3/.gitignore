@@ -1,0 +1,13 @@
+*
+!/.gitignore
+!/Packages/Copy Project Path to Clipboard/*
+!/Packages/User/.neovintageousrc
+!/Packages/User/Default (Linux).sublime-keymap
+!/Packages/User/LSP-pylsp.sublime-settings
+!/Packages/User/LSP.sublime-settings
+!/Packages/User/Markdown.sublime-build
+!/Packages/User/Material-Theme-Darker.sublime-theme
+!/Packages/User/Package Control.sublime-settings
+!/Packages/User/Preferences.sublime-settings
+!/Packages/themes/*
+!*/

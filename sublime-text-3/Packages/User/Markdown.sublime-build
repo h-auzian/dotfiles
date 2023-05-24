@@ -1,0 +1,24 @@
+{
+	"working_dir": "$folder",
+	"shell_cmd": "echo -- Working directory copied to clipboard --; echo $folder | xclip -selection clipboard",
+	"target": "ansi_color_build",
+	"syntax": "Packages/ANSIescape/ANSI.sublime-syntax",
+	"variants": [
+		{
+			"name": "Preview HTML",
+			"shell_cmd": "echo -- Preview HTML --; pandoc '$file' -o preview.html",
+		},
+		{
+			"name": "Preview PDF",
+			"shell_cmd": "echo -- Preview PDF $file $folder --; pandoc '$file' -o preview.pdf -V geometry:margin=1in",
+		},
+		{
+			"name": "Open HTML",
+			"shell_cmd": "echo -- Open HTML --; xdg-open preview.html",
+		},
+		{
+			"name": "Open PDF",
+			"shell_cmd": "echo -- Open PDF --; xdg-open preview.pdf",
+		},
+	],
+}

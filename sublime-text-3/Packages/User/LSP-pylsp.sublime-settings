@@ -1,0 +1,13 @@
+// Settings in here override those in "LSP-pylsp/LSP-pylsp.sublime-settings"
+{
+    "settings": {
+        "pylsp.configurationSources": ["flake8"],
+        "pylsp.plugins.flake8.enabled": true,
+        "pylsp.plugins.pycodestyle.enabled": false,
+        "pylsp.plugins.flake8.ignore": [
+            "E128", // Continuation line under-indented.
+            "E501", // Line too long.
+        ],
+        "pylsp.plugins.flake8.maxLineLength": 120,
+    }
+}

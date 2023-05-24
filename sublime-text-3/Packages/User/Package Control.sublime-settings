@@ -1,0 +1,61 @@
+{
+	"auto_upgrade": false,
+	"bootstrapped": true,
+	"debug": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"10% Too Dull for My Tastes Color Scheme",
+		"ActualVim",
+		"Agila Theme",
+		"ANSIescape",
+		"AutoDocstring",
+		"AutoFoldCode",
+		"ayu",
+		"Babel",
+		"Babel Snippets",
+		"BracketHighlighter",
+		"CMake",
+		"CoolBase64",
+		"DocBlockr",
+		"DocBlockr 2021 (DoxyDoxygen powered)",
+		"Dracula Color Scheme",
+		"GitGutter",
+		"gruvbox",
+		"JSX",
+		"Language - Spanish",
+		"LSP",
+		"LSP-pylsp",
+		"MarkdownPreview",
+		"Material Color Scheme",
+		"Material Theme",
+		"Monokai - Spacegray",
+		"MoveTab",
+		"NeoVintageous",
+		"OpenGL Shading Language (GLSL)",
+		"Origami",
+		"Package Control",
+		"PackageResourceViewer",
+		"Pretty JSON",
+		"Project Specific Syntax Settings",
+		"RawLineEdit",
+		"Requester",
+		"RESTer HTTP Client",
+		"SublimePaneNavigation",
+		"Sync View Scroll",
+		"Terraform",
+		"Test Switcher",
+		"Theme - Darkmatter",
+		"Theme - Spacegray",
+		"TypeScript",
+		"TypeScript Syntax",
+		"Vintage Relative Lines",
+		"Visual Studio Dark"
+	],
+	"repositories":
+	[
+		"https://github.com/borist/SublimePaneNavigation"
+	]
+}

@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Copy project path to Clipboard",
+        "command": "copy_project_path_to_clipboard"
+    }
+]

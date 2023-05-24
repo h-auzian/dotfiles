@@ -1,0 +1,13 @@
+let mapleader=<space>
+
+noremap h <insert>
+noremap i <Up>
+noremap j <Left>
+noremap k <Down>
+
+noremap u ^
+noremap o $
+" noremap <S-u> b
+" noremap <S-o> w
+
+" noremap <Ctrl+k> <S-Left>

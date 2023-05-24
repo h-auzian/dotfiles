@@ -1,0 +1,92 @@
+[
+    // Status bar.
+    {
+        "class": "label_control",
+        "parents": [{"class": "status_bar"}],
+        "color": [180, 180, 180],
+        "font.bold": false
+    },
+
+    // Buttons.
+    {
+        "class": "label_control",
+        "parents": [{"class": "button_control"}],
+        "color": [150, 150, 150],
+        "font.bold": true
+    },
+
+    // Tabs.
+    {
+        "class": "tab_label",
+        "fg": [150, 150, 150, 255],
+        "shadow_color": [255, 255, 255, 0],
+        "shadow_offset": [0, 0],
+        "font.size": 11,
+        "font.italic": false,
+        "font.bold": false
+    },
+
+    {
+        "class": "tab_label",
+        "parents": [{"class": "tab_control", "attributes": ["selected"]}],
+        "fg": [255, 255, 255, 255],
+        "shadow_color": [255, 255, 255, 0],
+        "shadow_offset": [0, 0]
+    },
+
+
+    // Sidebar.
+    {
+        "class": "sidebar_label",
+        "color": [150, 150, 150],
+        "font.bold": false,
+        "font.italic": false,
+        "shadow_color": [255, 255, 255, 0],
+        "shadow_offset": [0, 0]
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+        "color": [255, 255, 255],
+        "shadow_color": [255, 255, 255, 0],
+        "shadow_offset": [0, 0]
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        "font.bold": false,
+        "color": [0, 188, 212]
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+        "color": [175, 189, 196]
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+        "settings": ["bold_folder_labels"],
+        "font.bold": true,
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["expandable", "selected"]}],
+        "color": [255, 255, 255]
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+        "color": [0, 188, 212]
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+        "settings": ["bold_folder_labels"],
+        "font.bold": true
+    },
+    {
+        "class": "sidebar_label",
+        "attributes": ["transient"],
+        "font.italic": false
+    },
+]
