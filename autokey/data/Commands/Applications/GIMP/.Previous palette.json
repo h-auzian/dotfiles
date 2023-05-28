@@ -1,0 +1,30 @@
+{
+    "type": "script",
+    "description": "Previous palette",
+    "store": {},
+    "modes": [
+        3
+    ],
+    "usageCount": 5,
+    "prompt": false,
+    "omitTrigger": false,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [
+            "<alt>"
+        ],
+        "hotKey": "e"
+    },
+    "filter": {
+        "regex": "gimp-2.10.Gimp-2.10",
+        "isRecursive": false
+    }
+}

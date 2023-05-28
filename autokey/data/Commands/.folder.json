@@ -1,0 +1,25 @@
+{
+    "type": "folder",
+    "title": "Commands",
+    "modes": [],
+    "usageCount": 577,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [
+            "dd"
+        ],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}

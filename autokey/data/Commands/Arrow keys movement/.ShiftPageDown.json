@@ -1,0 +1,31 @@
+{
+    "type": "script",
+    "description": "Shift+PageDown",
+    "store": {},
+    "modes": [
+        3
+    ],
+    "usageCount": 8,
+    "prompt": false,
+    "omitTrigger": false,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [
+            "<shift>",
+            "<super>"
+        ],
+        "hotKey": "<down>"
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}
