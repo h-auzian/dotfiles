@@ -1,0 +1,14 @@
+# Aliases
+alias docker-compose='docker compose'
+alias ydiff='python3 -m ydiff -s -w 0 --wrap'
+alias cwd='printf %s "$(pwd)" | xclip -sel clip'
+alias nv='nvim'
+alias tm='tmux new -s home'
+alias lg='lazygit'
+
+# fzf keybindings
+source /usr/share/doc/fzf/examples/key-bindings.bash
+
+# Command history size
+HISTSIZE=10000
+HISTFILESIZE=10000
