@@ -113,6 +113,10 @@ return packer.startup(function(use)
     use "bluz71/vim-nightfly-guicolors"
     use "rebelot/kanagawa.nvim"
     use "marko-cerovac/material.nvim"
+    use "tanvirtin/monokai.nvim"
+    use "loctvl842/monokai-pro.nvim"
+    use "ErichDonGubler/vim-sublime-monokai"
+    use "sainnhe/everforest"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
