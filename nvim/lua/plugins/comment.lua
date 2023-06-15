@@ -3,4 +3,11 @@ if not status_ok then
 	return
 end
 
-comment.setup()
+comment.setup({
+    toggler = {
+        line = "<leader>u"
+    },
+    opleader = {
+        line = "<leader>u"
+    }
+})

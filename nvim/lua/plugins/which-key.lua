@@ -22,7 +22,7 @@ which_key.register({
         ["|"] = { ":NvimTreeFindFileToggle<CR>", "Toggle sidebar" },
 
         p = {
-            name = "Telescope",
+            name = "Telescope / Buffer navigation",
             q = { ":Telescope session-lens search_session<CR>", "Switch session" },
             d = { ":Telescope find_files hidden=true no_ignore=true<CR>", "Open buffer" },
             e = { ":Telescope treesitter default_text=function<CR>", "Search functions" },
@@ -31,6 +31,10 @@ which_key.register({
             s = { ":Telescope grep_string hidden=true<CR>", "Find word" },
             w = { ":Telescope buffers<CR>", "List open buffers" },
             c = { ":Telescope help_tags<CR>", "Show help" },
+            a = { ":Telescope resume<CR>", "Resume last search" },
+            u = { ":bprevious<CR>", "Go to previous buffer" },
+            o = { ":bnext<CR>", "Go to next buffer" },
+            i = { "<C-6>", "Go to last buffer" },
         },
 
         l = {
@@ -42,7 +46,7 @@ which_key.register({
             t = { ":LspZeroFormat<CR>", "Format current file" },
             e = { ":lua vim.diagnostic.open_float()<CR>", "Show diagnostics for current line" },
             a = { ":lua vim.lsp.buf.code_action()<CR>", "Show actions for current line" },
-            h = { ":lua vim.lsp.buf.hover()<CR>", "Show info of current symbol" },
+            l = { ":lua vim.lsp.buf.hover()<CR>", "Show info of current symbol" },
             r = { ":lua vim.lsp.buf.rename()<CR>", "Rename current symbol" },
             f = { ":Telescope lsp_references<CR>", "Show references for selected symbol" },
             d = { ":Telescope diagnostics<CR>", "Show all diagnostics" },
@@ -59,18 +63,21 @@ which_key.register({
         },
 
         a = {
-            name = "Split",
+            name = "Splits",
             -- r = { ":lua require('smart-splits').start_resize_mode()<CR>", "Resize" },
             i = { "<C-w>k", "Go up" },
             j = { "<C-w>h", "Go left" },
             k = { "<C-w>j", "Go down" },
             l = { "<C-w>l", "Go right" },
-            -- w = { ":resize +5<CR>", "Decrease height" },
-            -- a = { ":vertical resize -10<CR>", "Go down" },
-            -- s = { ":resize -5<CR>", "Increase height" },
-            -- d = { ":vertical resize +10<CR>", "Go right" },
-            ["|"] = { ":vsplit<CR>", "New vertical split" },
-            ["-"] = { ":split<CR>", "New horizontal split" },
+            w = { ":close<CR>", "Close split" },
+            I = { ":resize +5<CR>", "Decrease height" },
+            J = { ":vertical resize -10<CR>", "Decrease width" },
+            K = { ":resize -5<CR>", "Increase height" },
+            L = { ":vertical resize +10<CR>", "Increase width" },
+            d = { ":vsplit<CR>", "New vertical split" },
+            s = { ":split<CR>", "New horizontal split" },
+            ["|"] = { ":vsplit<CR>", "New vertical split (Alt)" },
+            ["-"] = { ":split<CR>", "New horizontal split (Alt)" },
             ["="] = { "<C-W>=", "Restore size" },
         },
 
@@ -102,6 +109,7 @@ which_key.register({
 
         c = {
             name = "Copy",
+            y = { "ggvGy", "Yank whole file" },
             c = {
                 ":redir @+ | pwd | redir END | let @+ = substitute(@+, '\\n', '', 'g')<CR>",
                 "Copy current working directory to clipboard"
