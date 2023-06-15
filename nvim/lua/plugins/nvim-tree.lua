@@ -7,7 +7,7 @@ nvim_tree.setup({
     prefer_startup_root = false,
     sync_root_with_cwd = true,
     view = {
-        width = 60,
+        width = "40%",
         side = "right",
         number = true,
         relativenumber = true,

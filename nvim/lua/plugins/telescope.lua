@@ -6,9 +6,7 @@ end
 local actions = require("telescope.actions")
 
 telescope.setup({
-
 	defaults = {
-
 		mappings = {
 			i = {
 				["<esc>"] = actions.close,
@@ -17,7 +15,6 @@ telescope.setup({
 				["<C-k>"] = actions.move_selection_next,
 			}
 		},
-
 		file_ignore_patterns = {
             ".angular",
             ".git/",
@@ -29,6 +26,16 @@ telescope.setup({
             "htmlcov/",
 			"node_modules/",
             "vendor"
-		}
-	}
+		},
+        layout_strategy = "vertical",
+        layout_config = {
+            width = 0.85,
+            preview_height = 0.4,
+        }
+	},
+    pickers = {
+        buffers = {
+            sort_lastused = true
+        }
+    },
 })
