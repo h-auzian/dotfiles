@@ -104,6 +104,9 @@ return packer.startup(function(use)
     use "folke/which-key.nvim"
     use "lewis6991/gitsigns.nvim"
     use "mrjones2014/smart-splits.nvim"
+    use "norcalli/nvim-colorizer.lua"
+    use "reisub0/hot-reload.vim"
+    use "jiangmiao/auto-pairs"
 
 	-- Themes
 	use "ellisonleao/gruvbox.nvim"
