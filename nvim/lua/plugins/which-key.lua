@@ -82,22 +82,6 @@ which_key.register({
             h = { ":%s/", "Replace all on current buffer" },
         },
 
-        ["ñ"] = {
-            name = "harpoon",
-              a   = { ":lua require('harpoon.mark').add_file()<CR>", "Mark current file" },
-              w   = { ":lua require('harpoon.ui').toggle_quick_menu()<CR>", "Show marked files" },
-              d   = { ":lua require('harpoon.ui').toggle_quick_menu()<CR>", "Show marked files" },
-              j   = { ":lua require('harpoon.ui').nav_file(1)<CR>", "Go to file 1" },
-              k   = { ":lua require('harpoon.ui').nav_file(2)<CR>", "Go to file 2" },
-              l   = { ":lua require('harpoon.ui').nav_file(3)<CR>", "Go to file 3" },
-            ["ñ"] = { ":lua require('harpoon.ui').nav_file(4)<CR>", "Go to file 4" },
-              u   = { ":lua require('harpoon.ui').nav_file(5)<CR>", "Go to file 5" },
-              i   = { ":lua require('harpoon.ui').nav_file(6)<CR>", "Go to file 6" },
-              o   = { ":lua require('harpoon.ui').nav_file(7)<CR>", "Go to file 6" },
-              p   = { ":lua require('harpoon.ui').nav_file(8)<CR>", "Go to file 6" },
-              c   = { ":lua require('harpoon.mark').clear_all()<CR>", "Remove all marks" },
-        },
-
         b = {
             name = "Base64",
             e = { ":lua require('b64').encode()<CR>", "Encode selection" },

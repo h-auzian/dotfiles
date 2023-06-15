@@ -4,8 +4,18 @@ if not status_ok then
 end
 
 lualine.setup({
-    -- options = {
-        -- theme = "auto"
-        -- theme = "material-stealth"
-    -- }
+    options = {
+        theme = "auto"
+    },
+    sections = {
+        lualine_b = {
+            {
+                function ()
+                    local key = require("grapple").key()
+                    return " " .. key
+                end,
+                cond = require("grapple").exists,
+            }
+        }
+    }
 })

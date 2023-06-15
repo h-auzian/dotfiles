@@ -81,7 +81,11 @@ return packer.startup(function(use)
     }
     use "nvim-tree/nvim-web-devicons"
 
-    -- Other
+    -- Misc
+    use {
+        "cbochs/grapple.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+    }
     use {
         "akinsho/bufferline.nvim",
         requires = "nvim-tree/nvim-web-devicons"
@@ -94,7 +98,6 @@ return packer.startup(function(use)
     use "xiyaowong/transparent.nvim"
     use "nvim-lualine/lualine.nvim"
     use "WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"
-    use "ThePrimeagen/harpoon"
     use "alvan/vim-closetag"
     use "tpope/vim-surround"
     use "taybart/b64.nvim"
