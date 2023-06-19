@@ -6,6 +6,8 @@ end
 
 cmp.setup({
     mapping = {
-        ['<CR>'] = cmp.mapping.confirm({select = true}),
+        ["<C-l>"] = cmp.mapping.confirm({select = true}),
+        ["<C-o>"] = cmp.mapping.confirm({select = true}),
+        ["<Tab>"] = cmp.config.disable,
     }
 })
