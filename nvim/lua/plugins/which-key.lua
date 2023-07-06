@@ -17,12 +17,13 @@ which_key.register({
         w = { ":bw<CR>", "Close current buffer" },
 
         d = { ":lua vim.lsp.buf.definition()<CR>", "Go to definition for selected symbol" },
+        h = { ":ClangdSwitchSourceHeader<CR>", "Switch header/implementation" },
 
         f = { ":NvimTreeFindFileToggle<CR>", "Toggle sidebar" },
         ["|"] = { ":NvimTreeFindFileToggle<CR>", "Toggle sidebar" },
 
         p = {
-            name = "Telescope / Buffer navigation",
+            name = "Buffer navigation",
             q = { ":Telescope session-lens search_session<CR>", "Switch session" },
             d = { ":Telescope find_files hidden=true no_ignore=true<CR>", "Open buffer" },
             e = { ":Telescope treesitter default_text=function<CR>", "Search functions" },
@@ -35,6 +36,7 @@ which_key.register({
             u = { ":bprevious<CR>", "Go to previous buffer" },
             o = { ":bnext<CR>", "Go to next buffer" },
             i = { "<C-6>", "Go to last buffer" },
+            h = { ":ClangdSwitchSourceHeader<CR>", "Switch header/implementation" },
         },
 
         l = {
