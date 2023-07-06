@@ -109,7 +109,8 @@ which_key.register({
 
         c = {
             name = "Copy",
-            y = { "ggvGy", "Yank whole file" },
+            y = { "gg0vG$y", "Yank whole file" },
+            l = { "_v$hygv<esc>", "Yank whole line without starting/ending whitespace" },
             c = {
                 ":redir @+ | pwd | redir END | let @+ = substitute(@+, '\\n', '', 'g')<CR>",
                 "Copy current working directory to clipboard"

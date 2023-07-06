@@ -73,4 +73,3 @@ set("n", "<leader>k", "zz")                       -- Center cursor vertically
 -- set("v", "<leader>u", "~")                        -- Toggle uppercase/lowercase in visual mode
 set("n", "<cr>", "ciw")                           -- Delete current word and enter insert mode
 set("v", "y", "ygv<esc>")                         -- Stay in position after yanking in visual mode
-set("n", "<leader>y", "_v$hygv<esc>")             -- Copy line without starting or ending whitespace
