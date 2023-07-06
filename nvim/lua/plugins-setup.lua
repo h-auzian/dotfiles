@@ -110,6 +110,7 @@ return packer.startup(function(use)
 
 	-- Themes
 	use "ellisonleao/gruvbox.nvim"
+	use "sainnhe/gruvbox-material"
     use "bluz71/vim-nightfly-guicolors"
     use "rebelot/kanagawa.nvim"
     use "marko-cerovac/material.nvim"

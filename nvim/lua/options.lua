@@ -28,7 +28,8 @@ o.backspace = [[indent,eol,start]]
 
 -- Colors and themes
 o.termguicolors = true
-vim.cmd("colorscheme gruvbox")
+o.background = "dark"
+vim.cmd("colorscheme gruvbox-material")
 
 -- Options per filetype
 vim.cmd("autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2")
