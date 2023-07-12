@@ -107,6 +107,7 @@ return packer.startup(function(use)
     use "norcalli/nvim-colorizer.lua"
     use "reisub0/hot-reload.vim"
     use "jiangmiao/auto-pairs"
+    use "ggandor/leap.nvim"
 
 	-- Themes
 	use "ellisonleao/gruvbox.nvim"
