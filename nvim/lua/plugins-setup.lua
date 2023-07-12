@@ -108,6 +108,7 @@ return packer.startup(function(use)
     use "reisub0/hot-reload.vim"
     use "jiangmiao/auto-pairs"
     use "ggandor/leap.nvim"
+    use "lukas-reineke/indent-blankline.nvim"
 
 	-- Themes
 	use "ellisonleao/gruvbox.nvim"

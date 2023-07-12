@@ -103,6 +103,8 @@ which_key.register({
             l = { ":set wrap!<CR>", "Toggle line wrap" },
             s = { ":ToggleColorColumn<CR>", "Toggle color column" },
             a = { ":%bw|e#<CR>", "Close all buffers" },
+            j = { ":set list!<CR>", "Toggle list chars" },
+            i = { ":IndentBlanklineToggle!<CR>", "Toggle indentation lines" },
             w = {
                 name = "Close buffer without saving",
                 w = { ":bw!<CR>", "Confirm" },

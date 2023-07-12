@@ -26,6 +26,9 @@ o.swapfile = false
 
 o.backspace = [[indent,eol,start]]
 
+o.list = false
+o.listchars:append "tab:> "
+o.listchars:append "space:⋅"
 -- Colors and themes
 o.termguicolors = true
 o.background = "dark"
