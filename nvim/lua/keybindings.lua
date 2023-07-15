@@ -23,8 +23,8 @@ set("v", "I", ":m '>-2<CR>gv=gv")
 set("v", "K", ":m '>+1<CR>gv=gv")
 
 -- Jump to next/previous function
--- set("n", "<C-h>", "[m", { remap = true })
--- set("n", "<C-n>", "]m", { remap = true })
+set("n", "<C-p>", "[m", opts)
+set("n", "<C-n>", "]m", opts)
 
 -- Insert line above/below current line
 set("n", "U", "O<esc>", opts)
