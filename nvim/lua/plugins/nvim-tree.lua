@@ -7,12 +7,17 @@ nvim_tree.setup({
     prefer_startup_root = false,
     sync_root_with_cwd = true,
     view = {
-        width = "40%",
+        width = 50,
+        preserve_window_proportions = true,
         side = "right",
         number = true,
         relativenumber = true,
         float = {
             enable = false,
+            open_win_config = {
+                width = 100,
+                height = 100,
+            }
         }
     },
     git = {
@@ -21,7 +26,7 @@ nvim_tree.setup({
     },
     actions = {
         open_file = {
-            quit_on_open = true
+            quit_on_open = false
         }
     },
     filters = {
