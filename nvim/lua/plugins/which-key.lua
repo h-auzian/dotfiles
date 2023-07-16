@@ -23,6 +23,8 @@ which_key.register({
         f = { ":NvimTreeFindFileToggle<CR>", "Toggle sidebar" },
         ["|"] = { ":NvimTreeFindFileToggle<CR>", "Toggle sidebar" },
 
+        i = { ":ToggleAlternate<CR>", "Toggle alternate on current symbol" },
+
         p = {
             name = "Buffer navigation",
             q = { ":Telescope session-lens search_session<CR>", "Switch session" },

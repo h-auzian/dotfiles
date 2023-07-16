@@ -94,6 +94,7 @@ return packer.startup(function(use)
         "kevinhwang91/nvim-ufo",
         requires = "kevinhwang91/promise-async"
     }
+    use "rmagatti/alternate-toggler"
     use "numToStr/Comment.nvim"
     use "xiyaowong/transparent.nvim"
     use "nvim-lualine/lualine.nvim"
