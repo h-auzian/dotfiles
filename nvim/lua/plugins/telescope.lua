@@ -25,7 +25,9 @@ telescope.setup({
             "env/",
             "htmlcov/",
 			"node_modules/",
-            "vendor"
+            "vendor",
+            "include",
+            "libs",
 		},
         layout_strategy = "vertical",
         layout_config = {
