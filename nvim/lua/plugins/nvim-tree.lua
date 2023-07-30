@@ -3,13 +3,40 @@ if not status_ok then
 	return
 end
 
+local side = "right" -- left|right
+local always_visible = false
+
+local quit_on_open
+local update_focused_file
+local keybind_command
+local width
+
+if (always_visible) then
+    quit_on_open = false
+    update_focused_file = true
+    keybind_command = "NvimTreeFocus"
+else
+    quit_on_open = true
+    update_focused_file = false
+    keybind_command = "NvimTreeFindFileToggle"
+end
+
+if (side == "left") then
+    width = 40
+else
+    width = 50
+end
+
 nvim_tree.setup({
     prefer_startup_root = false,
     sync_root_with_cwd = true,
+    update_focused_file = {
+        enable = update_focused_file,
+    },
     view = {
-        width = 50,
+        width = width,
         preserve_window_proportions = true,
-        side = "right",
+        side = side,
         number = true,
         relativenumber = true,
         float = {
@@ -26,7 +53,7 @@ nvim_tree.setup({
     },
     actions = {
         open_file = {
-            quit_on_open = true
+            quit_on_open = quit_on_open
         }
     },
     filters = {
@@ -38,3 +65,5 @@ nvim_tree.setup({
         }
     }
 })
+
+vim.keymap.set("n", "<leader>f", ":" .. keybind_command .. "<CR>")

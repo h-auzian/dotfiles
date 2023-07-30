@@ -59,11 +59,6 @@ set("n", "<leader>j", "<C-6>", opts)         -- Jump to last buffer in normal mo
 set("n", "<A-S-l>", "<C-6>", opts)           -- Jump to last buffer in normal mode
 set("i", "<A-S-l>", "<C-O><C-6>", opts)      -- Jump to last buffer in insert mode
 
--- NvimTree
--- set("", "<leader>|", ":NvimTreeFindFileToggle<CR>")       -- Show side bar with focus on current file
--- set("", "<leader>aj", ":NvimTreeResize +10<CR>")          -- Increase width
--- set("", "<leader>al", ":NvimTreeResize -10<CR>")          -- Decrease width
-
 -- Misc
 set("", "<leader>o", "%")                         -- Go to starting/closing bracket
 set("i", "<C-v>", "<C-R>*", opts)                 -- Paste with CTRL+V in insert mode
