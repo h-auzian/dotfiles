@@ -24,16 +24,14 @@ which_key.register({
             name = "Buffer navigation",
             q = { ":Telescope session-lens search_session<CR>", "Switch session" },
             d = { ":Telescope find_files hidden=true no_ignore=true<CR>", "Open buffer" },
-            e = { ":Telescope treesitter default_text=function<CR>", "Search functions" },
+            e = { ":Telescope lsp_document_symbols<CR>", "Search symbols" },
+            r = { ":Telescope treesitter default_text=function<CR>", "Search functions" },
             f = { ":Telescope current_buffer_fuzzy_find<CR>", "Find in current buffer" },
             g = { ":Telescope live_grep hidden=true<CR>", "Find on all files" },
             s = { ":Telescope grep_string hidden=true<CR>", "Find word" },
             w = { ":Telescope buffers<CR>", "List open buffers" },
             c = { ":Telescope help_tags<CR>", "Show help" },
             a = { ":Telescope resume<CR>", "Resume last search" },
-            u = { ":bprevious<CR>", "Go to previous buffer" },
-            o = { ":bnext<CR>", "Go to next buffer" },
-            i = { "<C-6>", "Go to last buffer" },
             h = { ":ClangdSwitchSourceHeader<CR>", "Switch header/implementation" },
         },
 
@@ -49,7 +47,7 @@ which_key.register({
             l = { ":lua vim.lsp.buf.hover()<CR>", "Show info of current symbol" },
             r = { ":lua vim.lsp.buf.rename()<CR>", "Rename current symbol" },
             f = { ":Telescope lsp_references<CR>", "Show references for selected symbol" },
-            d = { ":Telescope diagnostics<CR>", "Show all diagnostics" },
+            w = { ":Telescope diagnostics<CR>", "Show all diagnostics" },
         },
 
         e = {
@@ -64,7 +62,6 @@ which_key.register({
 
         a = {
             name = "Splits",
-            -- r = { ":lua require('smart-splits').start_resize_mode()<CR>", "Resize" },
             i = { "<C-w>k", "Go up" },
             j = { "<C-w>h", "Go left" },
             k = { "<C-w>j", "Go down" },
@@ -117,10 +114,6 @@ which_key.register({
                 ":redir @+ | pwd | redir END | let @+ = substitute(@+, '\\n', '', 'g')<CR>",
                 "Copy current working directory to clipboard"
             },
-            -- s = {
-            --     ":redir @+ | pwd | redir END | let @+ = substitute(@+, '.*\/', '', 'g')<CR>",
-            --     "Copy current working directory to clipboard"
-            -- },
         },
     },
 })

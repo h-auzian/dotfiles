@@ -34,11 +34,13 @@ set("n", "O", "o<esc>", opts)
 set("v", "p", '"_dp')
 set("v", "P", '"_dP')
 
--- Movement inside file
-set("n", "<C-u>", "<C-u>zz", opts)    -- Go up half a screen
-set("n", "<C-o>", "<C-d>zz", opts)    -- Go up half a screen
-set("n", "<C-j>", "<C-o>", opts)      -- Go to previous position with CTRL key
-set("n", "<C-l>", "<C-i>", opts)      -- Go to next position with CTRL key
+-- Move half a screen up/down while keeping the view centered
+set("n", "<C-u>", "<C-u>zz", opts)
+set("n", "<C-o>", "<C-d>zz", opts)
+
+-- Jump forwards/backwards using ctrl
+set("n", "<C-j>", "<C-o>", opts)
+set("n", "<C-l>", "<C-i>", opts)
 
 -- Change indentation in visual mode
 set("v", "<Tab>", "> gv", opts)
@@ -50,21 +52,18 @@ set("n", "<C-y>", "<C-r>", opts)
 set("i", "<C-z>", "<C-O>u", opts)
 set("i", "<C-y>", "<C-O><C-r>", opts)
 
--- Buffers
--- set("n", "<leader>u", ":bprevious<CR>")   -- Go to previous buffer with leader key
--- set("n", "<C-u>", ":bprevious<CR>")       -- Go to previous buffer with CTRL key
--- set("n", "<leader>o", ":bnext<CR>")       -- Go to next buffer with leader key
--- set("n", "<C-o>", ":bnext<CR>")           -- Go to next buffer with CTRL key
-set("n", "<leader>j", "<C-6>", opts)         -- Jump to last buffer in normal mode with leader key
-set("n", "<A-S-l>", "<C-6>", opts)           -- Jump to last buffer in normal mode
-set("i", "<A-S-l>", "<C-O><C-6>", opts)      -- Jump to last buffer in insert mode
+-- Jump to previous buffer using alt instead of leader
+set("n", "<A-S-l>", "<C-6>", opts)
+set("i", "<A-S-l>", "<C-O><C-6>", opts)
 
--- Misc
-set("", "<leader>o", "%")                         -- Go to starting/closing bracket
-set("i", "<C-v>", "<C-R>*", opts)                 -- Paste with CTRL+V in insert mode
-set("i", "<C-h>", "<C-w>", opts)                  -- Delete word with CTRL+h in insert mode
-set("n", "<leader>k", "zz")                       -- Center cursor vertically
--- set("n", "<leader>u", "g~")                       -- Toggle uppercase/lowercase in normal mode
--- set("v", "<leader>u", "~")                        -- Toggle uppercase/lowercase in visual mode
-set("n", "<cr>", "ciw")                           -- Delete current word and enter insert mode
-set("v", "y", "ygv<esc>")                         -- Stay in position after yanking in visual mode
+-- Alternate between brackets
+set("", "<leader>o", "%")
+
+-- Paste using ctrl+v in insert mode
+set("i", "<C-v>", "<C-R>*", opts)
+
+-- Delete word using ctrl+backspace in insert mode
+set("i", "<C-h>", "<C-w>", opts)
+
+-- Keep the cursor position after pasting in visual mode
+set("v", "y", "ygv<esc>")
