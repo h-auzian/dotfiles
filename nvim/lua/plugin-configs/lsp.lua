@@ -30,7 +30,6 @@ lspconfig.pylsp.setup({
                     ignore = {
                         "E124", -- Closing bracket does not match visual indentation
                         "E128", -- Continuation line under-indented for visual indent
-                        -- "E301",
                         "E501", -- Line too long
                     }
                 },

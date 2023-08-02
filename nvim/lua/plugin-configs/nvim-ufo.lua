@@ -14,6 +14,5 @@ o.foldnestmax = 1
 nvim_ufo.setup({
     provider_selector = function(bufnr, filetype, buftype)
         return {"indent"}
-        -- return {"treesitter", "indent"}
     end
 })

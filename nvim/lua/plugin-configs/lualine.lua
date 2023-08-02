@@ -19,7 +19,7 @@ lualine.setup({
         },
         lualine_c = {
             { "GetGrappleKey()", cond = require("grapple").exists },
-            "filename",
+            { "filename", path = 1 },
         }
     }
 })

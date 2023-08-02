@@ -108,8 +108,6 @@ return packer.startup(function(use)
     use "mrjones2014/smart-splits.nvim"
     use "norcalli/nvim-colorizer.lua"
     use "reisub0/hot-reload.vim"
-    use "jiangmiao/auto-pairs"
-    use "ggandor/leap.nvim"
     use "lukas-reineke/indent-blankline.nvim"
     use "tikhomirov/vim-glsl"
 
@@ -120,7 +118,6 @@ return packer.startup(function(use)
     use "rebelot/kanagawa.nvim"
     use "marko-cerovac/material.nvim"
     use "tanvirtin/monokai.nvim"
-    use "loctvl842/monokai-pro.nvim"
     use "ErichDonGubler/vim-sublime-monokai"
     use "sainnhe/everforest"
 
