@@ -24,6 +24,8 @@ o.clipboard = "unnamedplus"
 o.spelllang = "en,es"
 o.swapfile = false
 
+o.cmdheight = 0;
+
 o.backspace = [[indent,eol,start]]
 
 o.list = false

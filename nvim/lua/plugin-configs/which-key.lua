@@ -21,7 +21,7 @@ which_key.register({
         i = { ":ToggleAlternate<CR>", "Toggle alternate on current symbol" },
 
         p = {
-            name = "Buffer navigation",
+            name = "Buffer navigation / Search",
             q = { ":Telescope session-lens search_session<CR>", "Switch session" },
             d = { ":Telescope find_files hidden=true no_ignore=true<CR>", "Open buffer" },
             e = { ":Telescope lsp_document_symbols<CR>", "Search symbols" },
@@ -97,6 +97,7 @@ which_key.register({
             n = { ":enew<CR>", "Open buffer without file" },
             l = { ":set wrap!<CR>", "Toggle line wrap" },
             s = { ":ToggleColorColumn<CR>", "Toggle color column" },
+            k = { ":ToggleCommandHeight<CR>", "Toggle command height" },
             a = { ":%bw|e#<CR>", "Close all buffers" },
             j = { ":set list!<CR>", "Toggle list chars" },
             i = { ":IndentBlanklineToggle!<CR>", "Toggle indentation lines" },
