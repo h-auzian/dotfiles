@@ -4,7 +4,15 @@ if not status_ok then
 end
 
 treesitter.setup({
-    ensure_installed = {"python"},
+    ensure_installed = {
+        "c",
+        "cmake",
+        "cpp",
+        "glsl",
+        "javascript",
+        "php",
+        "python",
+    },
     sync_install = false,
     highlight = {
         enable = true,
