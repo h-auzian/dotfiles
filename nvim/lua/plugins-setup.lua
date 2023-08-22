@@ -100,6 +100,7 @@ return packer.startup(function(use)
     use "reisub0/hot-reload.vim"
     use "lukas-reineke/indent-blankline.nvim"
     use "tikhomirov/vim-glsl"
+    use "machakann/vim-highlightedyank"
 
 	-- Themes
 	use "ellisonleao/gruvbox.nvim"
