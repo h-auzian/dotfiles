@@ -3,8 +3,10 @@ if not status_ok then
 	return
 end
 
+local grapple = require("grapple")
+
 function GetGrappleKey()
-    local key = require("grapple").key()
+    local key = grapple.key()
     return " " .. key
 end
 
@@ -18,7 +20,7 @@ lualine.setup({
             "diagnostics",
         },
         lualine_c = {
-            { "GetGrappleKey()", cond = require("grapple").exists },
+            { "GetGrappleKey()", cond = grapple.exists },
             { "filename", path = 1 },
         }
     }
