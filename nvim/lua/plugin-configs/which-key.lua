@@ -101,6 +101,8 @@ which_key.register({
             a = { ":%bw|e#<CR>", "Close all buffers" },
             j = { ":set list!<CR>", "Toggle list chars" },
             i = { ":IndentBlanklineToggle!<CR>", "Toggle indentation lines" },
+            p = { ":lua require('duck').hatch('🐤')<CR>", "Duck" },
+            P = { ":lua require('duck').cook()<CR>", "Cook Duck" },
             w = {
                 name = "Close buffer without saving",
                 w = { ":bw!<CR>", "Confirm" },
