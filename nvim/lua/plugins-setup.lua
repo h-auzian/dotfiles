@@ -46,22 +46,16 @@ return packer.startup(function(use)
         "VonHeikemen/lsp-zero.nvim",
         branch = "v2.x",
         requires = {
-            -- LSP Support
             {"neovim/nvim-lspconfig"},
             {"williamboman/mason.nvim"},
             {"williamboman/mason-lspconfig.nvim"},
-
-            -- Autocompletion
             {"hrsh7th/nvim-cmp"},
             {"hrsh7th/cmp-buffer"},
             {"hrsh7th/cmp-path"},
             {"saadparwaiz1/cmp_luasnip"},
             {"hrsh7th/cmp-nvim-lsp"},
             {"hrsh7th/cmp-nvim-lua"},
-
-            -- Snippets
             {"L3MON4D3/LuaSnip"},
-            {"rafamadriz/friendly-snippet"},
         }
     }
 
@@ -89,10 +83,6 @@ return packer.startup(function(use)
     use {
         "akinsho/bufferline.nvim",
         requires = "nvim-tree/nvim-web-devicons"
-    }
-    use {
-        "kevinhwang91/nvim-ufo",
-        requires = "kevinhwang91/promise-async"
     }
     use "folke/flash.nvim"
     use "rmagatti/alternate-toggler"
