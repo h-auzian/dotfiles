@@ -12,6 +12,7 @@ treesitter.setup({
         "javascript",
         "php",
         "python",
+        "sql",
     },
     sync_install = false,
     highlight = {
