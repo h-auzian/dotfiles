@@ -32,6 +32,10 @@ else
     session_name=$selected_dir
 fi
 
+# Remove possible dots in the session name, as tmux doesn't allow their use.
+# This can happen in paths such as ".config", ".ssh", and so on.
+session_name=$(echo $session_name | tr -d .)
+
 # If a session with said name doesn't exists, create a new tmux session with
 # four windows, open nvim in the first one, and then switch to said session.
 # If the session already exists, then simply switch to it without creating
