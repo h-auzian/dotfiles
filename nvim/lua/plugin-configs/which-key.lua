@@ -41,7 +41,7 @@ which_key.register({
             k = { ":lua vim.diagnostic.goto_next()<CR>", "Go to next diagnostic" },
             q = { "<Plug>(toggle-lsp-diag)", "Toggle diagnostics" },
             s = { "<Plug>(toggle-lsp-diag-vtext)", "Toggle diagnostics text" },
-            t = { ":LspZeroFormat<CR>", "Format current file" },
+            t = { ":LspZeroFormat<CR>", "Format current buffer" },
             e = { ":lua vim.diagnostic.open_float()<CR>", "Show diagnostics for current line" },
             a = { ":lua vim.lsp.buf.code_action()<CR>", "Show actions for current line" },
             l = { ":lua vim.lsp.buf.hover()<CR>", "Show info of current symbol" },
@@ -103,7 +103,8 @@ which_key.register({
             i = { ":IndentBlanklineToggle!<CR>", "Toggle indentation lines" },
             p = { ":lua require('duck').hatch('🐤')<CR>", "Duck" },
             P = { ":lua require('duck').cook()<CR>", "Cook Duck" },
-            c = { ":%s/\\s\\+$//e<CR>", "Clear whitespace on current buffer" },
+            o = { ":ToggleTrailingWhitespaceHighlight<CR>", "Toggle trailing whitespace highlight" },
+            O = { ":ClearBufferTrailingWhitespace<CR>", "Clear trailing whitespace on current buffer" },
             w = {
                 name = "Close buffer without saving",
                 w = { ":bw!<CR>", "Confirm" },
@@ -112,7 +113,7 @@ which_key.register({
 
         c = {
             name = "Copy",
-            y = { "gg0vG$y", "Yank whole file" },
+            y = { "gg0vG$y", "Yank whole buffer" },
             l = { "_v$hygv<esc>", "Yank whole line without starting/ending whitespace" },
             c = {
                 ":redir @+ | pwd | redir END | let @+ = substitute(@+, '\\n', '', 'g')<CR>",
