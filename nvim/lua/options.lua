@@ -13,7 +13,7 @@ o.shiftround = true
 o.expandtab = true
 o.smartindent = true
 
-o.wrap = false
+
 o.hidden = true
 o.scrolloff = 15
 
@@ -31,6 +31,14 @@ o.backspace = [[indent,eol,start]]
 o.list = false
 o.listchars:append "tab:> "
 o.listchars:append "space:⋅"
+
+-- Wrap long lines into multiple ones, but without splitting any word.
+-- Initially disabled; toggleable with a keybind.
+o.wrap = false
+o.breakindent = true
+o.breakindentopt = "shift:2"
+o.lbr = true
+
 -- Colors and themes
 o.termguicolors = true
 o.background = "dark"
