@@ -19,6 +19,7 @@ which_key.register({
         d = { ":lua vim.lsp.buf.definition()<CR>", "Go to definition for selected symbol" },
         h = { ":ClangdSwitchSourceHeader<CR>", "Switch header/implementation" },
         i = { ":ToggleAlternate<CR>", "Toggle alternate on current symbol" },
+        f = { ":NvimTreeFindFileToggle<CR>", "Open NvimTree" },
 
         p = {
             name = "Buffer navigation / Search",

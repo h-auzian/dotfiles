@@ -3,49 +3,42 @@ if not status_ok then
 	return
 end
 
-local side = "right" -- left|right
-local always_visible = false
+WIDTH_SCALE = 0.4
+HEIGHT_SCALE = 0.8
+COMMAND_BAR_COMPENSATION = 1
 
-local quit_on_open
-local update_focused_file
-local keybind_command
-local width
+-- Returns the settings so that the floating window appears centered on screen.
+-- This function is passed to the setup function instead of passing static
+-- values, so that the window appears centered even after changing the terminal
+-- and/or the font size without the need of restarting neovim.
+local function getCenteredWindowOptions()
+    local screen_width = vim.opt.columns:get()
+    local screen_height = vim.opt.lines:get() - vim.opt.cmdheight:get()
+    local window_width = math.floor(screen_width * WIDTH_SCALE)
+    local window_height = math.floor(screen_height * HEIGHT_SCALE)
+    local window_left = (screen_width - window_width) / 2
+    local window_top = ((vim.opt.lines:get() - window_height) / 2) - vim.opt.cmdheight:get()
 
-if (always_visible) then
-    quit_on_open = false
-    update_focused_file = true
-    keybind_command = "NvimTreeFocus"
-else
-    quit_on_open = true
-    update_focused_file = false
-    keybind_command = "NvimTreeFindFileToggle"
-end
-
-if (side == "left") then
-    width = 40
-else
-    width = 50
+    return {
+        border = "rounded",
+        relative = "editor",
+        row = window_top - COMMAND_BAR_COMPENSATION,
+        col = window_left,
+        width = window_width,
+        height = window_height,
+    }
 end
 
 nvim_tree.setup({
     prefer_startup_root = false,
     sync_root_with_cwd = true,
-    update_focused_file = {
-        enable = update_focused_file,
-    },
     view = {
-        width = width,
-        preserve_window_proportions = true,
-        side = side,
         number = true,
         relativenumber = true,
         float = {
-            enable = false,
-            open_win_config = {
-                width = 100,
-                height = 100,
-            }
-        }
+            enable = true,
+            open_win_config = getCenteredWindowOptions,
+        },
     },
     git = {
         enable = false,
@@ -53,8 +46,10 @@ nvim_tree.setup({
     },
     actions = {
         open_file = {
-            quit_on_open = quit_on_open
-        }
+            window_picker = {
+                enable = false,
+            },
+        },
     },
     filters = {
         custom = {
@@ -62,8 +57,6 @@ nvim_tree.setup({
             "__pycache__",
             "*.egg-info",
             ".pytest_cache",
-        }
-    }
+        },
+    },
 })
-
-vim.keymap.set("n", "<leader>f", ":" .. keybind_command .. "<CR>")
