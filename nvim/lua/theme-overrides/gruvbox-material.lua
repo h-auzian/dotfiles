@@ -1,0 +1,6 @@
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#707070" })
+vim.api.nvim_set_hl(0, "Comment", { fg = "#A29384", italic = true })
+vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = nil })
+vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = nil })
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = nil })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = nil })
