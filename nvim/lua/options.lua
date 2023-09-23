@@ -32,6 +32,9 @@ o.list = false
 o.listchars:append "tab:> "
 o.listchars:append "space:⋅"
 
+o.splitright = true
+o.splitbelow = true
+
 -- Wrap long lines into multiple ones, but without splitting any word.
 -- Initially disabled; toggleable with a keybind.
 o.wrap = false
