@@ -63,26 +63,41 @@ which_key.register({
 
         a = {
             name = "Splits",
+
+            ["-"] = { ":split<CR>", "New horizontal split" },
+            ["|"] = { ":vsplit<CR>", "New vertical split" },
+
             a = { ":CenterBuffer<CR>", "Center current buffer" },
+
             i = { "<C-w>k", "Go up" },
             j = { "<C-w>h", "Go left" },
             k = { "<C-w>j", "Go down" },
             l = { "<C-w>l", "Go right" },
+
+            I = { "<C-w>k<C-w>_", "Go up and maximize" },
+            J = { "<C-w>h<C-w>|", "Go left and maximize" },
+            K = { "<C-w>j<C-w>_", "Go down and maximize" },
+            L = { "<C-w>l<C-w>|", "Go right and maximize" },
+
             w = { ":close<CR>", "Close split" },
             s = { ":wincmd r<CR>", "Swap buffers" },
+
             r = {
+                name = "Resize splits",
                 i = { ":resize +3<CR>", "Decrease height" },
                 k = { ":resize -3<CR>", "Increase height" },
                 j = { ":vertical resize -10<CR>", "Decrease width" },
                 l = { ":vertical resize +10<CR>", "Increase width" },
                 r = { "<C-W>=", "Restore size" },
+                ["|"] = { "<C-w>|", "Maximize vertical split" },
+                ["-"] = { "<C-w>_", "Maximize horizontal split" },
             },
+
             d = {
+                name = "Change splits",
                 ["-"] = { ":wincmd J<CR>", "Change to horizontal" },
                 ["|"] = { ":wincmd H<CR>", "Change to vertical" },
             },
-            ["-"] = { ":split<CR>", "New horizontal split" },
-            ["|"] = { ":vsplit<CR>", "New vertical split" },
         },
 
         r = {
