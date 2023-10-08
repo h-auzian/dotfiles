@@ -63,6 +63,7 @@ which_key.register({
 
         a = {
             name = "Splits",
+            a = { ":CenterBuffer<CR>", "Center current buffer" },
             i = { "<C-w>k", "Go up" },
             j = { "<C-w>h", "Go left" },
             k = { "<C-w>j", "Go down" },

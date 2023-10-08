@@ -102,6 +102,7 @@ return packer.startup(function(use)
     use "tikhomirov/vim-glsl"
     use "machakann/vim-highlightedyank"
     use "tamton-aquib/duck.nvim"
+    use "smithbm2316/centerpad.nvim"
 
     -- Themes
     use "ellisonleao/gruvbox.nvim"

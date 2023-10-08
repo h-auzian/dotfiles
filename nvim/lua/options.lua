@@ -32,8 +32,10 @@ o.list = false
 o.listchars:append "tab:> "
 o.listchars:append "space:⋅"
 
+-- Splits.
 o.splitright = true
 o.splitbelow = true
+o.winminwidth = 20
 
 -- Wrap long lines into multiple ones, but without splitting any word.
 -- Initially disabled; toggleable with a keybind.
