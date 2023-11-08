@@ -52,6 +52,14 @@ set("n", "<C-y>", "<C-r>", opts)
 set("i", "<C-z>", "<C-O>u", opts)
 set("i", "<C-y>", "<C-O><C-r>", opts)
 
+-- Assign/go to marker
+set("n", "ñ<space>", "m", opts)
+set("n", "ñ", "'", opts)
+
+-- Record/play macro
+set("n", "Q", "q", opts)
+set("n", "q", "@", opts)
+
 -- Jump to previous buffer using alt instead of leader
 set("n", "<A-S-l>", "<C-6>", opts)
 set("i", "<A-S-l>", "<C-O><C-6>", opts)
