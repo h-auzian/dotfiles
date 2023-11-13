@@ -50,12 +50,7 @@ o.background = "dark"
 vim.cmd("colorscheme gruvbox-material")
 
 -- Options per filetype
-vim.cmd("autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2")
-vim.cmd("autocmd FileType javascriptreact setlocal shiftwidth=2 softtabstop=2")
-vim.cmd("autocmd FileType typescript setlocal shiftwidth=2 softtabstop=2")
-vim.cmd("autocmd FileType typescriptreact setlocal shiftwidth=2 softtabstop=2")
+vim.cmd("autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal shiftwidth=2 softtabstop=2")
 vim.cmd("autocmd FileType dart setlocal shiftwidth=2 softtabstop=2")
-vim.cmd("autocmd FileType cpp setlocal noexpandtab")
-vim.cmd("autocmd FileType hpp setlocal noexpandtab")
-vim.cmd("autocmd FileType html setlocal noexpandtab")
-vim.cmd("autocmd FileType htmldjango setlocal noexpandtab")
+vim.cmd("autocmd FileType cpp,hpp setlocal noexpandtab")
+vim.cmd("autocmd FileType html,htmldjango setlocal noexpandtab")
