@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-WIDTH_SCALE = 0.4
+WIDTH_SCALE = 0.8
 HEIGHT_SCALE = 0.8
 COMMAND_BAR_COMPENSATION = 1
 
