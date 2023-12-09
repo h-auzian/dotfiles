@@ -114,6 +114,14 @@ which_key.register({
             d = { ":lua require('b64').decode()<CR>", "Decode selection" },
         },
 
+        k = {
+            name = "JSON",
+            k = { ":%!jq '.'<CR><CR>", "Beautify JSON" },
+            l = { ":%!jq '.' -c<CR><CR>", "Minify JSON" },
+            d = { ":%!jq '. | {}'<left><left>", "Filter JSON object" },
+            f = { ":%!jq '[.[] | {}]'<left><left><left>", "Filter JSON list" },
+        },
+
         q = {
             name = "Misc",
             n = { ":enew<CR>", "Open buffer without file" },
