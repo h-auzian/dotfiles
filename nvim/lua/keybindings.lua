@@ -14,9 +14,9 @@ set("", "j", "h", opts)
 set("", "h", "i", opts)
 set("", "H", "I", opts)
 
--- Start/End of line with o/j
-set("", "o", "(v:count == 0 ? 'g$' : '$')", { expr = true })
+-- Go to start/end of line taking word wrap into account
 set("", "u", "(v:count == 0 ? 'g0' : '0')", { expr = true })
+set("", "o", "(v:count == 0 ? 'g$' : '$')", { expr = true })
 
 -- Move lines up and down
 set("v", "I", ":m '>-2<CR>gv=gv")
