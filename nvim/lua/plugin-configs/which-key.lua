@@ -143,12 +143,11 @@ which_key.register({
 
         c = {
             name = "Copy",
-            y = { "gg0vG$y", "Yank whole buffer" },
+            y = { "gg0vG$y<C-o>", "Yank whole buffer" },
             l = { "_v$hygv<esc>", "Yank whole line without starting/ending whitespace" },
-            c = {
-                ":redir @+ | pwd | redir END | let @+ = substitute(@+, '\\n', '', 'g')<CR>",
-                "Copy current working directory to clipboard"
-            },
+            r = { ":let @+ = expand('%:.')<CR>", "Copy relative path to clipboard", },
+            f = { ":let @+ = expand('%:t')<CR>", "Copy filename to clipboard", },
+            c = { ":redir @+ | pwd | redir END | let @+ = substitute(@+, '\\n', '', 'g')<CR><ESC>", "Copy current working directory to clipboard" },
         },
     },
 })
