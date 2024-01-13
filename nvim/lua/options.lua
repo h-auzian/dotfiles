@@ -47,7 +47,7 @@ o.lbr = true
 -- Colors and themes
 o.termguicolors = true
 o.background = "dark"
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme monokai")
 
 -- Options per filetype
 vim.cmd("autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal shiftwidth=2 softtabstop=2")
