@@ -33,6 +33,10 @@ lspconfig.pylsp.setup({
                         "E501", -- Line too long
                     }
                 },
+                jedi_completion = {
+                    enabled = true,
+                    include_params = true,
+                },
             }
         }
     }
