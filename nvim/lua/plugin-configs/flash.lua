@@ -10,14 +10,12 @@ flash.setup({
             "cmp_menu",
             "noice",
             "flash_prompt",
-            "nvimtree"
+            "nvimtree",
         },
     },
     modes = {
         search = {
-            highlight = {
-                backdrop = true
-            }
+            enabled = false,
         }
     },
 })
