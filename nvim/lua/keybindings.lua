@@ -75,3 +75,7 @@ set("i", "<C-h>", "<C-w>", opts)
 
 -- Keep the cursor position after pasting in visual mode
 set("v", "y", "ygv<esc>")
+
+-- Yank without exiting visual mode.
+set("v", "Y", "ygv")
+set("v", "<C-c>", "ygv")
