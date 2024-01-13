@@ -30,7 +30,7 @@ which_key.register({
             f = { ":Telescope current_buffer_fuzzy_find<CR>", "Find in current buffer" },
             g = { ":Telescope live_grep hidden=true<CR>", "Find on all files" },
             s = { ":Telescope grep_string hidden=true<CR>", "Find word" },
-            w = { ":Telescope buffers<CR>", "List open buffers" },
+            w = { ":Telescope buffers sort_mru=true<CR>", "List open buffers" },
             c = { ":Telescope help_tags<CR>", "Show help" },
             a = { ":Telescope resume<CR>", "Resume last search" },
             h = { ":ClangdSwitchSourceHeader<CR>", "Switch header/implementation" },
