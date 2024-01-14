@@ -60,10 +60,6 @@ set("n", "ñ", "'", opts)
 set("n", "Q", "q", opts)
 set("n", "q", "@", opts)
 
--- Jump to previous buffer using alt instead of leader
-set("n", "<A-S-l>", "<C-6>", opts)
-set("i", "<A-S-l>", "<C-O><C-6>", opts)
-
 -- Alternate between brackets
 set("", "<leader>o", "%")
 
