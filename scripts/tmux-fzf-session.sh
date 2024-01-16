@@ -45,8 +45,8 @@ if ! tmux has-session -t="$session_name" 2> /dev/null; then
     tmux new-window -t "$session_name" -c $selected_path
     tmux new-window -t "$session_name" -c $selected_path
     tmux new-window -t "$session_name" -c $selected_path
-    tmux send-keys -t "$session_name":0 'nvim' Enter
-    tmux switch-client -t "$session_name":0
+    tmux send-keys -t "$session_name":1 'nvim' Enter
+    tmux switch-client -t "$session_name":1
 else
     tmux switch-client -t "$session_name"
 fi
