@@ -98,7 +98,7 @@ return packer.startup(function(use)
     use "mrjones2014/smart-splits.nvim"
     use "norcalli/nvim-colorizer.lua"
     use "reisub0/hot-reload.vim"
-    use "lukas-reineke/indent-blankline.nvim"
+    use { "lukas-reineke/indent-blankline.nvim", tag = "v2.20.8" }
     use "tikhomirov/vim-glsl"
     use "machakann/vim-highlightedyank"
     use "tamton-aquib/duck.nvim"
