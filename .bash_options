@@ -5,6 +5,7 @@ alias cwd='printf %s "$(pwd)" | xclip -sel clip'
 alias nv='nvim'
 alias tm='tmux new -s home'
 alias lg='lazygit'
+alias Cat='$HOME/.config/scripts/cat_with_cat.sh'
 
 # fzf keybindings
 source /usr/share/doc/fzf/examples/key-bindings.bash
