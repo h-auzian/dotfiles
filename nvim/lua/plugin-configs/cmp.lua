@@ -22,11 +22,16 @@ local function expand_prev(fallback)
 end
 
 cmp.setup({
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
+    },
     mapping = {
         ["<C-o>"] = cmp.mapping.confirm({ select = true }),
         ["<C-j>"] = cmp.mapping(expand_prev, { "i", "s" }),
         ["<C-l>"] = cmp.mapping(expand_next, { "i", "s" }),
-    }
+    },
 })
 
 -- Disable default keybinds in insert mode to avoid conflicts with the CMP keybinds.
