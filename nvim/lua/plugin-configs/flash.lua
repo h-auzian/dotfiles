@@ -24,4 +24,4 @@ vim.api.nvim_set_hl(0, 'FlashMatch', { fg = 'green' })
 vim.api.nvim_set_hl(0, 'FlashCurrent', { fg = 'red' })
 vim.api.nvim_set_hl(0, 'FlashLabel', { fg = 'white' })
 
-vim.keymap.set({"n", "v"}, "s", function() require("flash").jump() end)
+vim.keymap.set({"n", "x"}, "s", function() require("flash").jump() end)

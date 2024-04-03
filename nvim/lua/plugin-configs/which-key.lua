@@ -1,6 +1,6 @@
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
-	return
+    return
 end
 
 local presets = require("which-key.plugins.presets")
@@ -11,7 +11,7 @@ which_key.setup()
 which_key.register({
 
     ["<leader>"] = {
-        mode = { "n", "v" },
+        mode = { "n", "x" },
 
         s = { ":w<CR>", "Save current buffer" },
         w = { ":bw<CR>", "Close current buffer" },
