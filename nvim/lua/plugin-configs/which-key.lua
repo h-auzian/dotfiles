@@ -117,6 +117,7 @@ which_key.register({
         k = {
             name = "JSON",
             k = { ":%!jq '.'<CR><CR>", "Beautify JSON" },
+            K = { ":%!jq '.' --indent 4<CR><CR>", "Beautify JSON with 4 spaces of indentation" },
             l = { ":%!jq '.' -c<CR><CR>", "Minify JSON" },
             d = { ":%!jq '. | {}'<left><left>", "Filter JSON object" },
             f = { ":%!jq '[.[] | {}]'<left><left><left>", "Filter JSON list" },
