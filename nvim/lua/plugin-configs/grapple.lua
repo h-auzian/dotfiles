@@ -3,7 +3,9 @@ if not status_ok then
 	return
 end
 
-grapple.setup()
+grapple.setup({
+    scope = "cwd",
+})
 
 -- Keybindings
 local set = vim.keymap.set
@@ -11,8 +13,8 @@ local prefix = "<leader>ñ"
 local set_key = "<space>"
 
 local function set_grapple_keybind(key)
-    set("n", prefix .. key, function() grapple.select({ key = key }) end)
-    set("n", prefix .. set_key .. key, function() grapple.tag({ key = key }) end)
+    set("n", prefix .. key, function() grapple.select({ name = key }) end)
+    set("n", prefix .. set_key .. key, function() grapple.tag({ name = key }) end)
 end
 
 local keys = {
@@ -39,4 +41,4 @@ for _, key in pairs(special_keys) do
 end
 
 
-set("n", prefix .. set_key .. set_key, function() grapple.popup_tags() end)
+set("n", prefix .. set_key .. set_key, function() grapple.open_tags() end)

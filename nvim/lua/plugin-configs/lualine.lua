@@ -6,8 +6,7 @@ end
 local grapple = require("grapple")
 
 function GetGrappleKey()
-    local key = grapple.key()
-    return " " .. key
+    return " " .. grapple.name_or_index()
 end
 
 lualine.setup({
