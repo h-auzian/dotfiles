@@ -7,6 +7,15 @@ alias tm='tmux new -s home'
 alias lg='lazygit'
 alias Cat='$HOME/.config/scripts/cat_with_cat.sh'
 
+# Paths for tmux-fzf-session script
+paths="$HOME/Dropbox/\n"
+paths+="$HOME/Dropbox/Libros\n"
+paths+="$HOME/.ssh/\n"
+paths+=$(find ~/.config/ -mindepth 1 -maxdepth 1 -type d)"\n"
+paths+=$(find ~/Hans/Pega/ -mindepth 1 -maxdepth 3 -type d)"\n"
+paths+=$(find ~/Hans/Proyectos/Programación/ -mindepth 1 -maxdepth 2 -type d)"\n"
+export TMUX_FZF_SESSION_PATHS=$paths
+
 # fzf keybindings
 source /usr/share/doc/fzf/examples/key-bindings.bash
 

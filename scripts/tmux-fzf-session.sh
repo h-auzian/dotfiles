@@ -1,5 +1,18 @@
+#!/bin/bash -i
+
 # Creates a new tmux session for a path selected either via fzf or passed as a
 # parameter.
+#
+# Normally, using Alt+C with fzf installed lists all folders under the current
+# working directory, but that can take several seconds depending on the
+# directory. With this script, only an specific group of paths are passed to
+# fzf, to allow for their quick selection regardless of the current working
+# directory. The list of paths are read from an environment variable.
+#
+# The -i (interactive mode) flag is passed in the shebang line so that it
+# always loads the environment variables defined in .bashrc. This way, it's not
+# necessary to reload the terminal if the list of folders change during
+# runtime.
 
 # Retrieve possible parameters.
 total_windows=4
@@ -16,18 +29,10 @@ if [ $# -ge 1 ]; then
         initial_window=$3
     fi
 
-# If no path was received as parameter, define a list of paths to pass to fzf,
-# and then get the name of the selected path. Normally using Alt+C with fzf
-# lists all folders under the current working directory, but that usually takes
-# several seconds. In this case, only an specific group of paths are selected,
-# which are then passed to fzf to allow for their quick selection.
+# If no path was received as parameter, pass to fzf the folders defined in an
+# environment variable and then get the name of the selected path.
 else
-    folders="$HOME/Dropbox/\n"
-    folders+="$HOME/.ssh/\n"
-    folders+=$(find ~/.config/ -mindepth 1 -maxdepth 1 -type d)"\n"
-    folders+=$(find ~/Hans/Pega/ -mindepth 1 -maxdepth 3 -type d)"\n"
-    folders+=$(find ~/Hans/Proyectos/Programación/ -mindepth 1 -maxdepth 2 -type d)"\n"
-    selected_path=`printf "$folders" | fzf`
+    selected_path=`printf "$TMUX_FZF_SESSION_PATHS" | fzf`
 fi
 
 # If no path was selected with fzf, stop.
