@@ -1,8 +1,3 @@
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
-	return
-end
-
 WIDTH_SCALE = 0.8
 HEIGHT_SCALE = 0.8
 COMMAND_BAR_COMPENSATION = 1
@@ -29,34 +24,38 @@ local function getCenteredWindowOptions()
     }
 end
 
-nvim_tree.setup({
-    prefer_startup_root = false,
-    sync_root_with_cwd = true,
-    view = {
-        number = true,
-        relativenumber = true,
-        float = {
-            enable = true,
-            open_win_config = getCenteredWindowOptions,
+return {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = {"nvim-tree/nvim-web-devicons"},
+    opts = {
+        prefer_startup_root = false,
+        sync_root_with_cwd = true,
+        view = {
+            number = true,
+            relativenumber = true,
+            float = {
+                enable = true,
+                open_win_config = getCenteredWindowOptions,
+            },
         },
-    },
-    git = {
-        enable = false,
-        ignore = false,
-    },
-    actions = {
-        open_file = {
-            window_picker = {
-                enable = false,
+        git = {
+            enable = false,
+            ignore = false,
+        },
+        actions = {
+            open_file = {
+                window_picker = {
+                    enable = false,
+                },
+            },
+        },
+        filters = {
+            custom = {
+                "*.pyc",
+                "__pycache__",
+                "*.egg-info",
+                ".pytest_cache",
             },
         },
     },
-    filters = {
-        custom = {
-            "*.pyc",
-            "__pycache__",
-            "*.egg-info",
-            ".pytest_cache",
-        },
-    },
-})
+}

@@ -1,6 +1,5 @@
-require("functions")
-require("keybindings")
 require("options")
+require("keybindings")
 require("plugins-setup")
-require("plugin-configs")
+require("functions")
 require("theme-overrides")

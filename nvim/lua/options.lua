@@ -13,7 +13,6 @@ o.shiftround = true
 o.expandtab = true
 o.smartindent = true
 
-
 o.hidden = true
 o.scrolloff = 15
 
@@ -44,10 +43,9 @@ o.breakindent = true
 o.breakindentopt = "shift:2"
 o.lbr = true
 
--- Colors and themes
+-- Colors
 o.termguicolors = true
 o.background = "dark"
-vim.cmd("colorscheme monokai")
 
 -- Options per filetype
 vim.cmd("autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal shiftwidth=2 softtabstop=2")
