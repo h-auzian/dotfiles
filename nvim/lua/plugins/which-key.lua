@@ -14,7 +14,6 @@ return {
                 j = { "<C-6>", "Jump to last buffer" },
                 d = { ":lua vim.lsp.buf.definition()<CR>", "Go to definition for selected symbol" },
                 h = { ":ClangdSwitchSourceHeader<CR>", "Switch header/implementation" },
-                i = { ":ToggleAlternate<CR>", "Toggle alternate on current symbol" },
                 f = { ":NvimTreeFindFileToggle<CR>", "Open NvimTree" },
 
                 p = {
@@ -100,6 +99,12 @@ return {
                     r = { "cgn", "Replace current Highlight" },
                     a = { ":noh<CR>", "Clear highlight" },
                     h = { ":%s/", "Replace all on current buffer" },
+                },
+
+                i = {
+                    name = "Code helpers",
+                    i = { ":ToggleAlternate<CR>", "Toggle alternate value on current symbol" },
+                    l = { ":TSJToggle<CR>", "Toggle object/array between single or multiple lines" },
                 },
 
                 b = {
