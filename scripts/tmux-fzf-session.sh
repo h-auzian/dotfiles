@@ -1,4 +1,4 @@
-#!/bin/bash -i
+#!/bin/bash
 
 # Creates a new tmux session for a path selected either via fzf or passed as a
 # parameter.
@@ -8,11 +8,6 @@
 # directory. With this script, only an specific group of paths are passed to
 # fzf, to allow for their quick selection regardless of the current working
 # directory. The list of paths are read from an environment variable.
-#
-# The -i (interactive mode) flag is passed in the shebang line so that it
-# always loads the environment variables defined in .bashrc. This way, it's not
-# necessary to reload the terminal if the list of folders change during
-# runtime.
 
 # Retrieve possible parameters.
 total_windows=4
@@ -32,6 +27,12 @@ if [ $# -ge 1 ]; then
 # If no path was received as parameter, pass to fzf the folders defined in an
 # environment variable and then get the name of the selected path.
 else
+    # Try to reload the environment variables to avoid the need to restart the
+    # terminal and tmux when running this script with a tmux keybind.
+    if [ -f ~/.config/.bash_options ]; then
+        source ~/.config/.bash_options
+    fi
+
     selected_path=`printf "$TMUX_FZF_SESSION_PATHS" | fzf`
 fi
 
