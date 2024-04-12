@@ -11,7 +11,7 @@ light_flash_highlight="blue"
 
 tmux_file="$HOME/.config/tmux/configs/options.conf"
 nvim_options_file="$HOME/.config/nvim/lua/options.lua"
-nvim_flash_file="$HOME/.config/nvim/lua/plugin-configs/flash.lua"
+nvim_flash_file="$HOME/.config/nvim/lua/plugins/flash.lua"
 konsole_file="$HOME/.local/share/konsole/Profile 1.profile"
 
 # Detect current theme mode in the tmux config.
