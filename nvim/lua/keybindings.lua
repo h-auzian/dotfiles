@@ -36,6 +36,9 @@ set("n", "O", "o<esc>", opts)
 set("x", "p", '"_dp')
 set("x", "P", '"_dP')
 
+-- Paste text and autoindent
+set("n", "P", "p==")
+
 -- Move half a screen up/down while keeping the view centered
 set({"n", "x"}, "<C-u>", "<C-u>zz", opts)
 set({"n", "x"}, "<C-o>", "<C-d>zz", opts)
@@ -53,6 +56,7 @@ set("n", "<C-z>", "u", opts)
 set("n", "<C-y>", "<C-r>", opts)
 set("i", "<C-z>", "<C-O>u", opts)
 set("i", "<C-y>", "<C-O><C-r>", opts)
+set("x", "<C-z>", "", opts)
 
 -- Set/go to marker
 set("n", "ñ<space>", "m", opts)
@@ -77,3 +81,6 @@ set("x", "y", "ygv<ESC>")
 -- Yank without exiting visual mode
 set("x", "Y", "ygv")
 set("x", "<C-c>", "ygv")
+
+-- Misc
+set("n", "yaw", "yiw", opts)

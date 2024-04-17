@@ -52,6 +52,7 @@ return {
                     i = { "zc", "Close current fold" },
                     k = { "zO", "Open current fold" },
                     f = { ":let &l:foldlevel = indent('.') / &shiftwidth<CR>", "Fold current level" },
+                    a = { "zR", "Open all folds" },
                 },
 
                 a = {
