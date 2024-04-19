@@ -15,8 +15,9 @@ vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = nil })
 vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = "#323742" })
 vim.api.nvim_set_hl(0, "CursorLine", { fg = nil, bg = nil })
 vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#707070" })
+vim.api.nvim_set_hl(0, "@neorg.tags.ranged_verbatim.code_block", { bg = "#101010" })
 
 -- Disable highlight overrides made by the LSP.
 for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
-  vim.api.nvim_set_hl(0, group, {})
+    vim.api.nvim_set_hl(0, group, {})
 end

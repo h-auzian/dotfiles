@@ -52,4 +52,5 @@ vim.cmd("autocmd FileType javascript,javascriptreact,typescript,typescriptreact 
 vim.cmd("autocmd FileType dart setlocal shiftwidth=2 softtabstop=2")
 vim.cmd("autocmd FileType cpp,hpp setlocal noexpandtab")
 vim.cmd("autocmd FileType html,htmldjango setlocal noexpandtab")
-vim.cmd("autocmd FileType text,markdown,tex setlocal wrap")
+vim.cmd("autocmd FileType text,markdown,tex,norg setlocal wrap")
+vim.cmd("autocmd FileType norg setlocal conceallevel=2")

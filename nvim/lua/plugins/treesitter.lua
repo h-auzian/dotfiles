@@ -12,6 +12,7 @@ return {
                 "glsl",
                 "javascript",
                 "lua",
+                "norg",
                 "php",
                 "python",
                 "sql",
