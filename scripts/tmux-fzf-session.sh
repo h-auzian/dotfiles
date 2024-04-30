@@ -33,7 +33,7 @@ else
         source ~/.config/.bash_options
     fi
 
-    selected_path=`printf "$TMUX_FZF_SESSION_PATHS" | fzf`
+    selected_path=$(printf "$TMUX_FZF_SESSION_PATHS" | fzf)
 fi
 
 # If no path was selected with fzf, stop.
@@ -48,7 +48,7 @@ parent_dir=$(basename $(dirname "$selected_path"))
 selected_dir=$(basename "$selected_path")
 
 if [ $parent_dir != $USER ]; then
-    session_name=`echo $parent_dir / $selected_dir`
+    session_name=$(echo $parent_dir / $selected_dir)
 else
     session_name=$selected_dir
 fi
