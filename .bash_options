@@ -25,3 +25,8 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 # Command history size
 HISTSIZE=10000
 HISTFILESIZE=10000
+
+# Functions
+function math {
+    python3 -c "from math import *; print($*)"
+}
