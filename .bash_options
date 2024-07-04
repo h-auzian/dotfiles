@@ -2,6 +2,7 @@
 alias docker-compose='docker compose'
 alias ydiff='python3 -m ydiff -s -w 0 --wrap'
 alias cwd='printf %s "$(pwd)" | xclip -sel clip'
+alias nvim='$HOME/nvim.appimage'
 alias nv='nvim'
 alias tm='tmux new -s home'
 alias lg='lazygit'
