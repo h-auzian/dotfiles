@@ -1,32 +1,32 @@
 gui:
-  nerdFontsVersion: '3'
-  expandFocusedSidePanel: true
+    nerdFontsVersion: '3'
+    expandFocusedSidePanel: true
 git:
-  autoRefresh: false
-  autoFetch: false
+    autoRefresh: false
+    autoFetch: false
 keybinding:
-  universal:
-    prevItem-alt: 'i'
-    nextItem-alt: 'k'
-    scrollLeft: 'J'
-    scrollRight: 'L'
-    prevBlock-alt: 'j'
-    nextBlock-alt: 'l'
-    scrollUpMain-alt1: 'I'
-    scrollDownMain-alt1: 'K'
-    scrollUpMain-alt2: '<c-u>'
-    scrollDownMain-alt2: '<c-o>'
-    prevTab: 'u'
-    nextTab: 'o'
-    jumpToBlock: ['|', '1', '2', '3', '4']
-    copyToClipboard: '<c-c>'
-    quit-alt1: null
-  files:
-    ignoreFile: 'h'
-  branches:
-    createPullRequest: 'O'
-    viewGitFlowOptions: 'h'
-    setUpstream: 'U'
-  submodules:
-    init: 'i'
-    update: 'U'
+    universal:
+        prevItem-alt: 'i'
+        nextItem-alt: 'k'
+        scrollLeft: 'J'
+        scrollRight: 'L'
+        prevBlock-alt: 'j'
+        nextBlock-alt: 'l'
+        scrollUpMain-alt1: 'I'
+        scrollDownMain-alt1: 'K'
+        scrollUpMain-alt2: '<c-u>'
+        scrollDownMain-alt2: '<c-o>'
+        prevTab: 'u'
+        nextTab: 'o'
+        jumpToBlock: ['|', '1', '2', '3', '4']
+        copyToClipboard: '<c-c>'
+        quit-alt1: <disabled>
+    files:
+        ignoreFile: 'h'
+    branches:
+        createPullRequest: 'O'
+        viewGitFlowOptions: 'h'
+        setUpstream: 'U'
+    submodules:
+        init: 'i'
+        update: 'U'
