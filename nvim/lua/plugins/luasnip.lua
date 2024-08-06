@@ -12,5 +12,8 @@ return {
             updateevents = "TextChanged,TextChangedI",
             enable_autosnippets = true,
         })
+
+        luasnip.filetype_extend("typescript", {"javascript"})
+        luasnip.filetype_extend("typescriptreact", {"javascript"})
     end,
 }
