@@ -30,7 +30,6 @@ return {
                     "include",
                     "libs",
                 },
-                layout_strategy = "vertical",
             },
             pickers = {
                 buffers = {

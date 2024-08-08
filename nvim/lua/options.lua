@@ -5,6 +5,7 @@ o.number = true
 o.relativenumber = true
 o.title = false
 o.mouse = "a"
+o.fillchars:append{ eob = " " }
 
 o.tabstop = 4
 o.shiftwidth = 4
@@ -12,6 +13,7 @@ o.softtabstop = 4
 o.shiftround = true
 o.expandtab = true
 o.smartindent = true
+o.foldlevelstart = 99
 
 o.hidden = true
 o.scrolloff = 15
@@ -22,6 +24,7 @@ o.clipboard = "unnamedplus"
 
 o.spelllang = "en,es"
 o.swapfile = false
+o.backupcopy = "yes"
 
 o.cmdheight = 0;
 
@@ -42,6 +45,7 @@ o.wrap = false
 o.breakindent = true
 o.breakindentopt = "shift:2"
 o.lbr = true
+o.formatoptions = "q"
 
 -- Colors
 o.termguicolors = true
@@ -51,6 +55,7 @@ o.background = "dark"
 vim.cmd("autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal shiftwidth=2 softtabstop=2")
 vim.cmd("autocmd FileType dart setlocal shiftwidth=2 softtabstop=2")
 vim.cmd("autocmd FileType cpp,hpp setlocal noexpandtab")
-vim.cmd("autocmd FileType html,htmldjango setlocal noexpandtab")
+vim.cmd("autocmd FileType html,htmldjango,css setlocal noexpandtab")
 vim.cmd("autocmd FileType text,markdown,tex,norg setlocal wrap")
+vim.cmd("autocmd FileType php setlocal autoindent")
 vim.cmd("autocmd FileType norg setlocal conceallevel=2")
