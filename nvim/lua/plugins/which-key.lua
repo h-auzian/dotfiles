@@ -136,6 +136,7 @@ return {
                     P = { ":lua require('duck').cook()<CR>", "Cook Duck" },
                     o = { ":ToggleTrailingWhitespaceHighlight<CR>", "Toggle trailing whitespace highlight" },
                     O = { ":ClearBufferTrailingWhitespace<CR>", "Clear trailing whitespace on current buffer" },
+                    q = { ":q<CR>", "Close Neovim" },
                     w = {
                         name = "Close buffer without saving",
                         w = { ":bw!<CR>", "Confirm" },
