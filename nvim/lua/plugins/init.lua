@@ -8,6 +8,7 @@ return {
     { "machakann/vim-highlightedyank" },
     { "tamton-aquib/duck.nvim" },
     { "smithbm2316/centerpad.nvim" },
+    { "arthurxavierx/vim-caser" },
 
     -- Themes
     { "ellisonleao/gruvbox.nvim" },
