@@ -16,7 +16,7 @@ return {
     { "bluz71/vim-nightfly-guicolors" },
     { "rebelot/kanagawa.nvim" },
     { "marko-cerovac/material.nvim" },
-    { "tanvirtin/monokai.nvim", init = function() vim.cmd("colorscheme gruvbox-material") end },
+    { "tanvirtin/monokai.nvim" },
     { "ErichDonGubler/vim-sublime-monokai" },
     { "sainnhe/everforest" },
 }

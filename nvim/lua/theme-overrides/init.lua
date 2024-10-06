@@ -3,5 +3,7 @@
 -- To check the highlight groups that can be overridden, run ":hi".
 -- To filter highlight groups by name, run ":filter <search> hi".
 
+vim.cmd("colorscheme gruvbox-material")
+
 local color_scheme = vim.g.colors_name
 pcall(require, "theme-overrides." .. color_scheme)
