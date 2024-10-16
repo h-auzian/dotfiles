@@ -9,8 +9,8 @@ set("i", "jk", "<ESC>", opts)
 set("i", "JK", "<ESC>", opts)
 
 -- Movement with IJKL
-set({"n", "x", "o"}, "i", "(v:count == 0 ? 'gk' : 'k')", { expr = true })
-set({"n", "x", "o"}, "k", "(v:count == 0 ? 'gj' : 'j')", { expr = true })
+set({"n", "x", "o"}, "i", "(v:count == 0 ? 'gkzz' : 'kzz')", { expr = true })
+set({"n", "x", "o"}, "k", "(v:count == 0 ? 'gjzz' : 'jzz')", { expr = true })
 set({"n", "x", "o"}, "j", "h", opts)
 
 -- Enter insert mode
