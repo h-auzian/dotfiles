@@ -12,6 +12,7 @@
 # Retrieve possible parameters.
 total_windows=4
 initial_window=1
+session_name=''
 
 if [ $# -ge 1 ]; then
     selected_path=$1
@@ -22,6 +23,10 @@ if [ $# -ge 1 ]; then
 
     if [ $# -ge 3 ]; then
         initial_window=$3
+    fi
+
+    if [ $# -ge 4 ]; then
+        session_name=$4
     fi
 
 # If no path was received as parameter, pass to fzf the folders defined in an
@@ -41,16 +46,19 @@ if [ -z $selected_path ]; then
     exit 0
 fi
 
-# Define the name of the session using the name of the selected folder plus the
-# name of its parent. If the parent folder is home, that is, the user name,
-# then just use the name of the selected folder.
-parent_dir=$(basename $(dirname "$selected_path"))
-selected_dir=$(basename "$selected_path")
+# If no session name was passed as parameter, define the name of the session
+# using the name of the selected folder plus the name of its parent. If the
+# parent folder is home, that is, the user's name, then just use the name of
+# the selected folder without the parent.
+if [ -z $session_name ]; then
+    parent_dir=$(basename $(dirname "$selected_path"))
+    selected_dir=$(basename "$selected_path")
 
-if [ $parent_dir != $USER ]; then
-    session_name=$(echo $parent_dir / $selected_dir)
-else
-    session_name=$selected_dir
+    if [ $parent_dir != $USER ]; then
+        session_name=$(echo $parent_dir / $selected_dir)
+    else
+        session_name=$selected_dir
+    fi
 fi
 
 # Remove possible dots in the session name, as tmux doesn't allow their use.
