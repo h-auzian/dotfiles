@@ -4,6 +4,10 @@ return {
         alternates = {
             ["==="] = "!==",
             ["=="] = "!=",
+            ["yes"] = "no",
+            ["on"] = "off",
+            ["top"] = "bottom",
+            ["left"] = "right",
         },
     },
 }
