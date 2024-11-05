@@ -1,5 +1,6 @@
 return {
     "folke/which-key.nvim",
+    version = "v2.1.0",
     init = function()
         local which_key = require("which-key")
         local presets = require("which-key.plugins.presets")

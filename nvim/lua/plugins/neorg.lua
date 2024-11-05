@@ -5,39 +5,44 @@ return {
     },
     lazy = false,
     version = "*",
-    opts = {
-        load = {
-            ["core.defaults"] = {},
-            ["core.keybinds"] = {
-                config = {
-                    hook = function (keybinds)
-                        local leader = keybinds.leader
-                        keybinds.map("norg", "n", leader .. leader, ":Neorg toggle-concealer<CR>")
-                        keybinds.remap_event("norg", "n", leader .. "a", "core.qol.todo_items.todo.task_undone")
-                        keybinds.remap_event("norg", "n", leader .. "s", "core.qol.todo_items.todo.task_pending")
-                        keybinds.remap_event("norg", "n", leader .. "d", "core.qol.todo_items.todo.task_done")
-                        keybinds.remap_event("norg", "n", leader .. "q", "core.qol.todo_items.todo.task_ambiguous")
-                        keybinds.remap_event("norg", "n", leader .. "w", "core.qol.todo_items.todo.task_cancelled")
-                        keybinds.remap_event("norg", "n", leader .. "e", "core.qol.todo_items.todo.task_on_hold")
-                    end
-                },
-            },
-            ["core.concealer"] = {
-                config = {
-                    folds = true,
-                    icons = {
-                        code_block = {
-                            conceal = true,
-                            highlight = nil,
-                            padding = {
-                                left = 1,
-                                right = 1,
+    opts = function()
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = "norg",
+            callback = function()
+                local leader = "<localleader>"
+                local opts = { buffer = true }
+
+                vim.keymap.set("n", leader .. leader, ":Neorg toggle-concealer<CR>", opts)
+                vim.keymap.set("n", leader .. "t", "<Plug>(neorg.pivot.list.toggle)", opts)
+                vim.keymap.set("n", leader .. "a", "<Plug>(neorg.qol.todo-items.todo.task-undone)", opts)
+                vim.keymap.set("n", leader .. "s", "<Plug>(neorg.qol.todo-items.todo.task-pending)", opts)
+                vim.keymap.set("n", leader .. "d", "<Plug>(neorg.qol.todo-items.todo.task-done)", opts)
+                vim.keymap.set("n", leader .. "q", "<Plug>(neorg.qol.todo-items.todo.task-ambiguous)", opts)
+                vim.keymap.set("n", leader .. "w", "<Plug>(neorg.qol.todo-items.todo.task-cancelled)", opts)
+                vim.keymap.set("n", leader .. "e", "<Plug>(neorg.qol.todo-items.todo.task-on-hold)", opts)
+            end
+        })
+
+        return {
+            load = {
+                ["core.defaults"] = {},
+                ["core.concealer"] = {
+                    config = {
+                        folds = true,
+                        icons = {
+                            code_block = {
+                                conceal = true,
+                                highlight = nil,
+                                padding = {
+                                    left = 1,
+                                    right = 1,
+                                },
+                                width = "content",
                             },
-                            width = "content",
                         },
                     },
                 },
             },
-        },
-    },
+        }
+    end
 }
