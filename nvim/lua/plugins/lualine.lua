@@ -23,4 +23,12 @@ return {
             },
         }
     end,
+    config = function(_, opts)
+        -- Lualine overrides "laststatus" config option on setup. As a
+        -- workaround, the value is stored before setup and set again
+        -- afterwards.
+        local laststatus = vim.opt.laststatus._value
+        require("lualine").setup(opts)
+        vim.opt.laststatus = laststatus
+    end,
 }

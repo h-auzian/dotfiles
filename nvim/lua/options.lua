@@ -27,6 +27,7 @@ o.swapfile = false
 o.backupcopy = "yes"
 
 o.cmdheight = 0;
+o.laststatus = 0;
 
 o.backspace = [[indent,eol,start]]
 
