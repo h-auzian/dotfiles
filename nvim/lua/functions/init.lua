@@ -1,4 +1,5 @@
 require("functions.center-buffer")
 require("functions.color-column")
 require("functions.command-bar-height")
+require("functions.markdown-todo-items")
 require("functions.trailing-whitespace")
