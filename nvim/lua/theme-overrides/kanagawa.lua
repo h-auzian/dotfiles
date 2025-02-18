@@ -1,3 +1,8 @@
+vim.api.nvim_set_hl(0, "@method", { fg = vim.api.nvim_get_hl(0, { name = "function" }).fg })
+vim.api.nvim_set_hl(0, "@conditional", { fg = vim.api.nvim_get_hl(0, { name = "Keyword" }).fg })
+vim.api.nvim_set_hl(0, "@repeat", { fg = vim.api.nvim_get_hl(0, { name = "Keyword" }).fg })
+vim.api.nvim_set_hl(0, "@exception", { fg = vim.api.nvim_get_hl(0, { name = "Keyword" }).fg })
+vim.api.nvim_set_hl(0, "@include", { fg = vim.api.nvim_get_hl(0, { name = "Keyword" }).fg })
 vim.api.nvim_set_hl(0, "Comment", { fg = "#A0A0A0" })
 vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#8080A0" })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "#9090B0" })
