@@ -1,8 +1,9 @@
 return {
     "nvim-lualine/lualine.nvim",
     opts = function()
-        local grapple = require("grapple")
+        require("noirbuddy.plugins.lualine")
 
+        local grapple = require("grapple")
         function GetGrappleKey()
             return " " .. grapple.name_or_index()
         end
