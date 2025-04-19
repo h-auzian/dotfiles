@@ -21,6 +21,9 @@ set({"n", "x"}, "H", "I", opts)
 set({"n", "x", "o"}, "u", "(v:count == 0 ? 'g0' : '0')", { expr = true })
 set({"n", "x", "o"}, "o", "(v:count == 0 ? 'g$' : '$')", { expr = true })
 
+-- Avoid jumping to the next ocurrence while highlighting word under cursor
+set("n", "*", "*N")
+
 -- Move lines up and down
 set("x", "K", ":m '>+1<CR>gv=gv")
 set("x", "I", ":m '>-2<CR>gv=gv")
