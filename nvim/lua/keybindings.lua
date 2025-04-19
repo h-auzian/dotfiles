@@ -24,6 +24,21 @@ set({"n", "x", "o"}, "o", "(v:count == 0 ? 'g$' : '$')", { expr = true })
 -- Avoid jumping to the next ocurrence while highlighting word under cursor
 set("n", "*", "*N")
 
+-- Go to next/previous occurence while keeping the view centered
+set("n", "n", "nzz")
+set("n", "N", "Nzz")
+
+-- Jump to the bottom of the file while keeping the view centered
+set("n", "G", "Gzz")
+
+-- Move half a screen up/down while keeping the view centered
+set({"n", "x"}, "<C-u>", "<C-u>zz", opts)
+set({"n", "x"}, "<C-o>", "<C-d>zz", opts)
+
+-- Jump forwards/backwards using ctrl while keeping the view centered
+set("n", "<C-j>", "<C-o>zz", opts)
+set("n", "<C-l>", "<C-i>zz", opts)
+
 -- Move lines up and down
 set("x", "K", ":m '>+1<CR>gv=gv")
 set("x", "I", ":m '>-2<CR>gv=gv")
@@ -42,14 +57,6 @@ set("x", "P", '"_dP')
 
 -- Paste text and autoindent
 set("n", "P", "p==")
-
--- Move half a screen up/down while keeping the view centered
-set({"n", "x"}, "<C-u>", "<C-u>zz", opts)
-set({"n", "x"}, "<C-o>", "<C-d>zz", opts)
-
--- Jump forwards/backwards using ctrl
-set("n", "<C-j>", "<C-o>", opts)
-set("n", "<C-l>", "<C-i>", opts)
 
 -- Change indentation in visual mode
 set("x", "<Tab>", "> gv", opts)

@@ -12,7 +12,7 @@ return {
 
                 s = { ":w<CR>", "Save current buffer" },
                 w = { ":bw<CR>", "Close current buffer" },
-                j = { "<C-6>", "Jump to last buffer" },
+                j = { "<C-6>zz", "Jump to last buffer" },
                 d = { ":lua vim.lsp.buf.definition()<CR>", "Go to definition for selected symbol" },
                 h = { ":ClangdSwitchSourceHeader<CR>", "Switch header/implementation" },
                 f = { ":NvimTreeFindFileToggle<CR>", "Open NvimTree" },
