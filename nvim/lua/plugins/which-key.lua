@@ -19,7 +19,6 @@ return {
 
                 p = {
                     name = "Buffer navigation / Search",
-                    q = { ":Telescope session-lens search_session<CR>", "Switch session" },
                     d = { ":Telescope find_files hidden=true no_ignore=true<CR>", "Open buffer" },
                     e = { ":Telescope lsp_document_symbols<CR>", "Search symbols" },
                     r = { ":Telescope treesitter default_text=function<CR>", "Search functions" },
