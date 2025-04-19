@@ -42,8 +42,9 @@ return {
                     a = { ":lua vim.lsp.buf.code_action()<CR>", "Show actions for current line" },
                     l = { ":lua vim.lsp.buf.hover()<CR>", "Show info of current symbol" },
                     r = { ":lua vim.lsp.buf.rename()<CR>", "Rename current symbol" },
-                    f = { ":Telescope lsp_references<CR>", "Show references for selected symbol" },
+                    d = { ":Telescope lsp_references<CR>", "Show references for selected symbol" },
                     w = { ":Telescope diagnostics<CR>", "Show all diagnostics" },
+                    f = { ":Telescope diagnostics bufnr=0<CR>", "Show all diagnostics for current buffer" },
                 },
 
                 e = {
