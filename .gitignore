@@ -12,4 +12,5 @@
 !tmux/
 !.bash_options
 !.gitignore
+!picom.conf
 !README.md
