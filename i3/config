@@ -1,0 +1,4 @@
+include initial-commands.conf
+include options.conf
+include keybindings.conf
+include application-settings.conf

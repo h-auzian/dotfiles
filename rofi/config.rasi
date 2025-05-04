@@ -1,0 +1,84 @@
+configuration {
+    modes: "window,drun,run,ssh,combi";
+    font: "Iosevka 10";
+    show-icons: true;
+    matching: "normal";
+    dpi: 240;
+    scroll-method: 1;
+    timeout {
+        action: "kb-cancel";
+        delay: 0;
+    }
+    filebrowser {
+        directories-first: true;
+        sorting-method: "name";
+    }
+}
+
+@theme "/dev/null"
+
+* {
+    bg: #202020;
+    bg-title: #303030;
+    fg: #FFFFFF;
+    fg-alt: #B0B0B0;
+    padding: 12;
+
+    background-color: @bg;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 30%;
+    children: [listview, inputbar];
+}
+
+element {
+    padding: 12;
+    text-color: @fg-alt;
+}
+
+element selected {
+    text-color: #FFFFFF;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+    padding: 0 0 0 12;
+}
+
+element-icon {
+    size: 45;
+}
+
+inputbar {
+    children: [prompt, entry];
+}
+
+listview {
+    scrollbar: true;
+    background-color: @bg;
+    columns: 1;
+    lines: 8;
+    reverse: true;
+}
+
+mainbox {
+    background-color: @bg;
+    children: [inputbar, listview];
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    background-color: @bg-title;
+    padding: 12;
+    text-color: @fg-alt;
+}

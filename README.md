@@ -2,6 +2,7 @@
 
 Dotfiles for different tools while working under Linux, including:
 
+- i3.
 - Tmux.
 - Neovim.
 - Lazygit.

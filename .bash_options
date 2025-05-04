@@ -19,6 +19,14 @@ paths+=$(find ~/Hans/Pega/ -mindepth 1 -maxdepth 3 -type d)"\n"
 paths+=$(find ~/Hans/Proyectos/Programación/ -mindepth 1 -maxdepth 2 -type d)"\n"
 export TMUX_FZF_SESSION_PATHS=$paths
 
+# Path for wallpaper folder.
+export WALLPAPER_FOLDER=~/Dropbox/Fondos/
+
+# Files to open via rofi.
+entries=$(find ~/Dropbox/ -name '*.xls')"\n"
+entries+=$(find ~/Dropbox/ -name '*.doc')"\n"
+export ROFI_FILES=$entries
+
 # fzf keybindings
 source /usr/share/doc/fzf/examples/key-bindings.bash
 
