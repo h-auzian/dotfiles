@@ -14,6 +14,8 @@ colors["red_bg"] = "#353030"
 colors["yellow_bg"] = "#353530"
 colors["cyan_bg"] = "#303535"
 
+colors["highlight"] = "#444444"
+
 -- Custom code colors.
 custom_highlight_colors = {
     noir_0 = {
@@ -107,9 +109,10 @@ end
 
 -- Other colors.
 vim.api.nvim_set_hl(0, "Search", { bg = colors.noir_7, fg = colors.noir_0 })
+vim.api.nvim_set_hl(0, "Visual", { bg = colors.highlight })
 
-vim.api.nvim_set_hl(0, "NvimTreeCursorLine", { bg = colors.noir_8 })
-vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = colors.noir_8 })
+vim.api.nvim_set_hl(0, "NvimTreeCursorLine", { bg = colors.highlight })
+vim.api.nvim_set_hl(0, "TelescopeSelection", { bg = colors.highlight })
 vim.api.nvim_set_hl(0, "Normal", { fg = colors.noir_2 })
 vim.api.nvim_set_hl(0, "TreesitterContext", { bg = colors.noir_8 })
 
