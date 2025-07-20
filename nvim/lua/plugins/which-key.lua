@@ -134,6 +134,8 @@ return {
                     a = { ":%bw|e#<CR>", "Close all buffers" },
                     j = { ":set list!<CR>", "Toggle list chars" },
                     i = { ":IndentBlanklineToggle!<CR>", "Toggle indentation lines" },
+                    r = { ":set relativenumber!<CR>", "Toggle relative line numbers" },
+                    R = { ":set number! | set relativenumber!<CR>", "Toggle line numbers" },
                     p = { ":lua require('duck').hatch('🐤')<CR>", "Duck" },
                     P = { ":lua require('duck').cook()<CR>", "Cook Duck" },
                     o = { ":ToggleTrailingWhitespaceHighlight<CR>", "Toggle trailing whitespace highlight" },
