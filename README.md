@@ -10,7 +10,7 @@ Dotfiles for different tools while working under Linux, including:
 
 Plus aliases and personal scripts.
 
-![screenshot](https://github.com/HAuzian/dotfiles/assets/5781534/a959e077-f14c-4c85-aeb2-e0fc745887d3)
+![screenshot](./.github/screenshots/noirbuddy-theme.jpeg)
 
 To load the bash options, add the following at the end of `.bashrc`:
 
