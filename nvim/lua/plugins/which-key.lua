@@ -107,6 +107,7 @@ return {
                     name = "Code helpers",
                     i = { ":ToggleAlternate<CR>", "Toggle alternate value on current symbol" },
                     l = { ":TSJToggle<CR>", "Toggle object/array between single or multiple lines" },
+                    s = { ":sort<CR>gv<ESC>", "Sort" },
                 },
 
                 b = {
