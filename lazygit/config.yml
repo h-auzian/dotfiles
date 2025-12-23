@@ -16,11 +16,13 @@ keybinding:
         scrollDownMain-alt1: 'K'
         scrollUpMain-alt2: '<c-u>'
         scrollDownMain-alt2: '<c-o>'
-        prevTab: 'u'
-        nextTab: 'o'
+        prevTab: 'U'
+        nextTab: 'O'
         jumpToBlock: ['|', '1', '2', '3', '4']
         copyToClipboard: '<c-c>'
         quit-alt1: <disabled>
+        goInto: 'o'
+        openFile: '<c-o>'
     files:
         ignoreFile: 'h'
     branches:
