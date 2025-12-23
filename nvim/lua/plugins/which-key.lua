@@ -15,7 +15,7 @@ return {
                 j = { "<C-6>zz", "Jump to last buffer" },
                 d = { ":lua vim.lsp.buf.definition()<CR>", "Go to definition for selected symbol" },
                 h = { ":ClangdSwitchSourceHeader<CR>", "Switch header/implementation" },
-                f = { ":NvimTreeFindFileToggle<CR>", "Open NvimTree" },
+                f = { ":NvimTreeFindFileToggle<CR>zz", "Open NvimTree" },
 
                 p = {
                     name = "Buffer navigation / Search",

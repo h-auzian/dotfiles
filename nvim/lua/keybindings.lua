@@ -22,7 +22,7 @@ set({"n", "x", "o"}, "u", "(v:count == 0 ? 'g0' : '0')", { expr = true })
 set({"n", "x", "o"}, "o", "(v:count == 0 ? 'g$' : '$')", { expr = true })
 
 -- Avoid jumping to the next ocurrence while highlighting word under cursor
-set("n", "*", "*N")
+set("n", "*", "*Nzz")
 
 -- Go to next/previous occurence while keeping the view centered
 set("n", "n", "nzz")
