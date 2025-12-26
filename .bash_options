@@ -2,11 +2,14 @@
 alias docker-compose='docker compose'
 alias ydiff='python3 -m ydiff -s -w 0 --wrap'
 alias cwd='printf %s "$(pwd)" | xclip -sel clip'
-alias nvim='$HOME/nvim.appimage'
+alias kitty='$HOME/.local/kitty.app/bin/kitty'
+alias nvim='$HOME/Applications/nvim.appimage'
 alias nv='nvim'
 alias tm='tmux new -s home'
+alias tma='tmux a'
 alias lg='lazygit'
 alias Cat='$HOME/.config/scripts/cat_with_cat.sh'
+alias lss='ls -l -h --color'
 
 # Paths for tmux-fzf-session script
 paths="$HOME/Dropbox/\n"
