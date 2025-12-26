@@ -25,10 +25,13 @@ keybinding:
         openFile: '<c-o>'
     files:
         ignoreFile: 'h'
+    commits:
+        openInBrowser: '<c-o>'
     branches:
-        createPullRequest: 'O'
+        createPullRequest: '<c-o>'
+        viewPullRequestOptions: '<c-O>'
         viewGitFlowOptions: 'h'
-        setUpstream: 'U'
+        setUpstream: '<c-u>'
     submodules:
         init: 'i'
-        update: 'U'
+        update: '<c-u>'
