@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Opens an application depending of the current virtual desktop/workspace in focus.
 # This script works best while associated to a keyboard shortcut.
 

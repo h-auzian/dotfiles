@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Makes changes in several config files to switch between light and dark modes.
 # It reads the tmux config as reference to detect the current mode, and then
 # changes the rest of the config files accordingly.

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Launch LMMS with GUI scaling.
 # This script works best if directly associated to the LMMS application on the
 # quick start menu.

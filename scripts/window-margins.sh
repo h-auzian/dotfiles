@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Resizes the current window to an almost maximized size, but with borders.
 # Best used with keyboard shortcuts.
 

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Assigns at runtime a new tmux keybind to switch to the currently active
 # session, useful to "mark" it and quickly jump to it from any other session.
 # The keybind will exist until the tmux server is killed.

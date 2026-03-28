@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Assigns dynamically at runtime a new tmux keybind to run the tmux-fzf-session
 # script to switch to the currently active session, useful to "mark" it and
 # quickly jump to it from any other session. This keybind will also be saved on

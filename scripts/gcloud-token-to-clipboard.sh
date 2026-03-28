@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Simple script to generate a GCloud token, copying it to the system clipboard.
 # Requires xclip installed.
 

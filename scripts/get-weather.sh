@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Simple script to get the current weather from OpenWeatherMap free API,
 # returning a simple string that is shown as a Polybar module.
 #
