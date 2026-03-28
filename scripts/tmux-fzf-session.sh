@@ -77,8 +77,11 @@ if ! tmux has-session -t="$session_name" 2> /dev/null; then
         tmux new-window -t "$session_name" -c $selected_path
     done
 
-    # Open nvim on the first window.
+    # Open neovim on the first window.
     tmux send-keys -t "$session_name":1 'nvim' Enter
+
+    # Open lazygit on the fourth window.
+    tmux send-keys -t "$session_name":4 'lazygit' Enter
 
     # Switch to the newly created session on the specified window.
     tmux switch-client -t "$session_name":$initial_window
