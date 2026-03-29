@@ -67,7 +67,7 @@ session_name=$(echo $session_name | tr -d .)
 
 # If a session with said name doesn't exist, create it according to the
 # received parameters.
-if ! tmux has-session -t="$session_name" 2> /dev/null; then
+if ! tmux has-session -t "=$session_name" 2> /dev/null; then
 
     # Create the session.
     tmux new-session -ds "$session_name" -c "$selected_path"
