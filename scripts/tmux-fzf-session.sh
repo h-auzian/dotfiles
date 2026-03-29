@@ -70,11 +70,11 @@ session_name=$(echo $session_name | tr -d .)
 if ! tmux has-session -t="$session_name" 2> /dev/null; then
 
     # Create the session.
-    tmux new-session -ds "$session_name" -c $selected_path
+    tmux new-session -ds "$session_name" -c "$selected_path"
 
     # Create the specified number of windows.
     for i in $(seq 2 $total_windows); do
-        tmux new-window -t "$session_name" -c $selected_path
+        tmux new-window -t "$session_name" -c "$selected_path"
     done
 
     # Open neovim on the first window.
