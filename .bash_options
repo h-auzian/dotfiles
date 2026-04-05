@@ -8,7 +8,7 @@ alias nv='nvim'
 alias tm='tmux new -s home'
 alias tma='tmux a'
 alias lg='lazygit'
-alias Cat='$HOME/.config/scripts/cat_with_cat.sh'
+alias Cat='$HOME/.config/scripts/cat-with-cat.sh'
 alias lss='ls -l -h --color'
 
 # Paths for tmux-fzf-session script
