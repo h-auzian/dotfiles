@@ -5,3 +5,5 @@ function Linemode:custom_linemode()
     local size_str = size and ya.readable_size(size) or ""
     return ui.Line(string.format("%s | %s", size_str, time_str))
 end
+
+require("fs-usage"):setup()
