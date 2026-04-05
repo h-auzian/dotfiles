@@ -38,7 +38,7 @@ else
         source ~/.config/.bash_options
     fi
 
-    selected_path=$(printf "$TMUX_FZF_SESSION_PATHS" | fzf)
+    selected_path=$(printf "$FZF_PATHS" | fzf)
 fi
 
 # If no path was selected with fzf, stop.
