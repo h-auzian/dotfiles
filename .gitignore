@@ -10,6 +10,7 @@
 !scripts/
 !sublime-text-3/
 !tmux/
+!yazi/
 !.bash_options
 !.gitignore
 !picom.conf

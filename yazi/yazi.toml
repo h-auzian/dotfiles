@@ -1,0 +1,20 @@
+[mgr]
+ratio = [ 1, 2, 2 ]
+show_hidden = true
+linemode = "custom_linemode"
+scrolloff = 99
+
+[opener]
+play_playlist = [
+    { run = 'mpv "$@"', desc = "Play as playlist", block = false }
+]
+
+edit_text_file = [
+    { run = '$HOME/Applications/nvim.appimage "$@"', desc = "Edit text file", block = true }
+]
+
+[open]
+prepend_rules = [
+    { mime = "{text/*,application/json}", use = ["edit_text_file", "reveal"] },
+    { mime = "{video/*,audio/*}", use = ["play_playlist", "reveal"] },
+]
