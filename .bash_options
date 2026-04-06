@@ -10,6 +10,8 @@ alias tma='tmux a'
 alias lg='lazygit'
 alias Cat='$HOME/.config/scripts/cat-with-cat.sh'
 alias lss='ls -l -h --color'
+alias video-split='python3 ~/Hans/Proyectos/Programación/video-editor/editor.py split.txt'
+alias video-join='python3 ~/Hans/Proyectos/Programación/video-editor/editor.py join.txt'
 
 # Paths for the fzf helper scripts.
 paths="$HOME/.config/\n"
