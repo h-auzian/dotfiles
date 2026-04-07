@@ -81,32 +81,6 @@ for key, value in pairs(markview_custom_colors) do
     vim.api.nvim_set_hl(0, key, value)
 end
 
--- Neorg custom colors.
-neorg_custom_colors = {
-    ["headings.1"] = colors.blue,
-    ["headings.2"] = colors.green,
-    ["headings.3"] = colors.red,
-    ["headings.4"] = colors.yellow,
-    ["headings.5"] = colors.cyan,
-    ["lists.ordered.prefix"] = colors.secondary,
-    ["lists.unordered.prefix"] = colors.secondary,
-    ["todo_items.undone"] = colors.blue,
-    ["todo_items.pending"] = colors.yellow,
-    ["todo_items.done"] = colors.green,
-    ["todo_items.uncertain"] = colors.cyan,
-    ["todo_items.cancelled"] = colors.red,
-    ["todo_items.on_hold"] = colors.noir_7,
-}
-
-for key, value in pairs(neorg_custom_colors) do
-    if string.find(key, "headings") then
-        vim.api.nvim_set_hl(0, "@neorg." .. key .. ".prefix", { fg = value })
-        vim.api.nvim_set_hl(0, "@neorg." .. key .. ".title", { fg = value })
-    else
-        vim.api.nvim_set_hl(0, "@neorg." .. key, { fg = value })
-    end
-end
-
 -- Other colors.
 vim.api.nvim_set_hl(0, "Search", { bg = colors.noir_7, fg = colors.noir_0 })
 vim.api.nvim_set_hl(0, "Visual", { bg = colors.highlight })

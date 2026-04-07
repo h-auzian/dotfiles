@@ -13,7 +13,6 @@ return {
                 "go",
                 "javascript",
                 "lua",
-                "norg",
                 "php",
                 "python",
                 "sql",
