@@ -12,6 +12,7 @@ alias Cat='$HOME/.config/scripts/cat-with-cat.sh'
 alias lss='ls -l -h --color'
 alias vs='python3 ~/Hans/Proyectos/Programación/video-editor/editor.py split.txt'
 alias vj='python3 ~/Hans/Proyectos/Programación/video-editor/editor.py join.txt'
+alias cal='ncal -b -w -y -M'
 
 # Paths for the fzf helper scripts.
 paths="$HOME/.config/\n"
