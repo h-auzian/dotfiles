@@ -29,16 +29,9 @@ if [ $# -ge 1 ]; then
         session_name=$4
     fi
 
-# If no path was received as parameter, pass to fzf the folders defined in an
-# environment variable and then get the name of the selected path.
+# If no path was received as parameter, select the path using fzf.
 else
-    # Try to reload the environment variables to avoid the need to restart the
-    # terminal and tmux when running this script with a tmux keybind.
-    if [ -f ~/.config/.bash_options ]; then
-        source ~/.config/.bash_options
-    fi
-
-    selected_path=$(printf "$FZF_PATHS" | fzf)
+    selected_path=$(~/.config/scripts/fzf-env-paths.sh)
 fi
 
 # If no path was selected with fzf, stop.

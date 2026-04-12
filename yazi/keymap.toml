@@ -13,7 +13,7 @@ prepend_keymap = [
 
     # Go to.
     { on = [ "g", "p" ], run = 'shell "/snap/yazi/current/ya emit cd \"$(xclip -selection clipboard -o)\""', desc = "Go to path from clipboard" },
-    { on = [ "<A-f>" ], run = 'shell --block "~/.config/scripts/yazi-fzf-session.sh"', desc = "Go to directory from fzf" },
+    { on = "<A-f>", run = 'shell --block "/snap/yazi/current/ya emit cd \"$(~/.config/scripts/fzf-env-paths.sh)\""', desc = "Go to directory from fzf" },
 
     # Other.
     { on = "d", run = "remove --permanently", desc = "Permanently delete selected files" },
