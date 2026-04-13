@@ -39,6 +39,7 @@
   "nvim-treesitter-context": { "branch": "master", "commit": "a2a334900d3643de585ac5c6140b03403454124f" },
   "nvim-web-devicons": { "branch": "master", "commit": "19d257cf889f79f4022163c3fbb5e08639077bd8" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
+  "qmk.nvim": { "branch": "main", "commit": "3c804c1480991e4837514900b22b9358cfd64fa1" },
   "smart-splits.nvim": { "branch": "master", "commit": "11600d75e1b57e9fe1f3ca880a917485fc399e8c" },
   "telescope.nvim": { "branch": "master", "commit": "85922dde3767e01d42a08e750a773effbffaea3e" },
   "toggle-lsp-diagnostics.nvim": { "branch": "main", "commit": "4c515b1625433306807e4a47756592fde0b83c82" },
