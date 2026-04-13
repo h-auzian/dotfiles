@@ -1,0 +1,85 @@
+[mgr]
+cwd = { fg = "#D0D0D0"}
+border_style = { fg = "#909090" }
+hovered = { fg = "#D0D0D0", bg = "#202020" }
+find_keyword = { fg = "#FFFFFF", bg = "#808080", bold = true, underline = true }
+find_position = { fg = "#FFFFFF", bold = true }
+
+marker_marked = { fg = "#E0E0E0", bg = "#E0E0E0" }
+marker_selected = { fg = "#909090", bg = "#909090" }
+marker_copied = { fg = "#D0D0B0", bg = "#D0D0B0" }
+marker_cut = { fg = "#D0B0B0", bg = "#D0B0B0" }
+
+count_selected = { fg = "#D0D0D0", bg = "#505050" }
+count_copied = { fg = "#000000", bg = "#D0D0B0" }
+count_cut = { fg = "#000000", bg = "#D0B0B0" }
+
+[indicator]
+parent = { bg = "#404040" }
+current = { bg = "#404040" }
+
+[mode]
+normal_main = { fg = "#D0D0D0", bg = "#505050" }
+normal_alt = { fg = "#D0D0D0", bg = "#303030" }
+select_main = { fg = "#000000", bg = "#E0E0E0" }
+select_alt = { fg = "#D0D0D0", bg = "#303030" }
+unset_main = { fg = "#000000", bg = "#909090" }
+unset_alt = { fg = "#D0D0D0", bg = "#303030" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+progress_label = { fg = "#D0D0D0" }
+progress_normal = { fg = "#D0D0D0", bg = "#505050" }
+progress_error = { fg = "#D0D0D0", bg = "#505050" }
+
+perm_sep   = { fg = "#505050" }
+perm_type  = { fg = "#D0D0D0" }
+perm_read  = { fg = "#D0D0D0" }
+perm_write = { fg = "#D0D0D0" }
+perm_exec  = { fg = "#D0D0D0" }
+
+[input]
+border = { fg = "#909090" }
+
+[tasks]
+border = { fg = "#909090" }
+
+[confirm]
+border = { fg = "#909090" }
+title = { fg = "#909090" }
+btn_yes = { fg = "#D0D0D0", bg = "#404040" }
+btn_no = { fg = "#D0D0D0", bg = "#404040" }
+
+[tabs]
+active = { fg = "#D0D0D0", bg = "#202020" }
+inactive = { fg = "#A0A0A0", bg = "#404040" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[which]
+mask = { bg = "#202020" }
+cand = { fg = "#F0F0F0" }
+rest = { fg = "#D0D0D0" }
+desc = { fg = "#D0D0D0" }
+separator_style = { fg = "#B0B0B0" }
+
+[spot]
+border = { fg = "#909090" }
+title = { fg = "#909090" }
+tbl_coll = { fg = "#D0D0D0", bg = "#202020" }
+tbl_cell = { fg = "#A0A0A0", bg = "#404040" }
+
+[pick]
+border = { fg = "#909090" }
+inactive = { fg = "#D0D0D0" }
+active = { fg = "#D0D0D0", bg = "#404040" }
+
+[notify]
+title_info = { fg = "red" }
+
+[filetype]
+rules = [
+	{ url = "*", fg = "#B0B0B0" },
+	{ url = "*/", fg = "#C0C0C0" },
+]
