@@ -86,7 +86,7 @@ set("i", "<C-v>", "<C-R>*", opts)
 -- Delete word using ctrl+backspace in insert mode
 set("i", "<C-h>", "<C-w>", opts)
 
--- Keep the cursor position after pasting in visual mode
+-- Keep the cursor position after yanking in visual mode
 set("x", "y", "ygv<ESC>")
 
 -- Yank without exiting visual mode

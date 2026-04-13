@@ -27,13 +27,7 @@ return {
                     "htmlcov/",
                     "node_modules/",
                     "vendor",
-                    "include",
                     "libs",
-                },
-            },
-            pickers = {
-                buffers = {
-                    sort_lastused = true
                 },
             },
         }

@@ -31,12 +31,16 @@ return {
         prefer_startup_root = false,
         sync_root_with_cwd = true,
         view = {
+            width = 30,
             number = true,
             relativenumber = true,
             float = {
                 enable = true,
                 open_win_config = getCenteredWindowOptions,
             },
+        },
+        update_focused_file = {
+            enable = false,
         },
         git = {
             enable = false,

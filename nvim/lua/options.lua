@@ -14,6 +14,8 @@ o.shiftround = true
 o.expandtab = true
 o.smartindent = true
 o.foldlevelstart = 99
+o.timeoutlen = 250
+o.autoread = true
 
 o.hidden = true
 o.scrolloff = 15
@@ -59,3 +61,4 @@ vim.cmd("autocmd FileType cpp,hpp setlocal noexpandtab")
 vim.cmd("autocmd FileType html,htmldjango,css setlocal noexpandtab")
 vim.cmd("autocmd FileType text,markdown,tex setlocal wrap")
 vim.cmd("autocmd FileType php setlocal autoindent")
+vim.cmd("autocmd FileType text setlocal commentstring=#\\ %s")

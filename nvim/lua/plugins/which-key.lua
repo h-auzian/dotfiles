@@ -28,7 +28,6 @@ return {
                     w = { ":Telescope buffers sort_mru=true<CR>", "List open buffers" },
                     c = { ":Telescope help_tags<CR>", "Show help" },
                     a = { ":Telescope resume<CR>", "Resume last search" },
-                    h = { ":ClangdSwitchSourceHeader<CR>", "Switch header/implementation" },
                 },
 
                 l = {
@@ -132,7 +131,7 @@ return {
                     name = "Misc",
                     n = { ":enew<CR>", "Open buffer without file" },
                     l = { ":set wrap!<CR>", "Toggle line wrap" },
-                    s = { ":ToggleColorColumn<CR>", "Toggle color column" },
+                    S = { ":ToggleColorColumn<CR>", "Toggle color column" },
                     k = { ":ToggleStatusLineHeight<CR>", "Toggle status line height" },
                     K = { ":ToggleCommandBarHeight<CR>", "Toggle command bar height" },
                     a = { ":%bw|e#<CR>", "Close all buffers" },
@@ -153,7 +152,7 @@ return {
 
                 c = {
                     name = "Copy",
-                    y = { "gg0vG$y<C-o>", "Yank whole buffer" },
+                    y = { "gg0vG$y", "Yank whole buffer" },
                     l = { "_v$hygv<esc>", "Yank whole line without starting/ending whitespace" },
                     r = { ":let @+ = expand('%:.')<CR>", "Copy relative path to clipboard", },
                     f = { ":let @+ = expand('%:t')<CR>", "Copy filename to clipboard", },

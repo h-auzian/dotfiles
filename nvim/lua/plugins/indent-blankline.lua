@@ -5,6 +5,11 @@ return {
         show_end_of_line = true,
         space_char_blankline = " ",
         use_treesitter = true,
-        enabled = false,
+        enabled = true,
+        filetype_exclude = {
+            "markdown",
+            "help",
+            "man",
+        },
     },
 }

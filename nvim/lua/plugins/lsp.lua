@@ -47,6 +47,10 @@ return {
                             enabled = true,
                             include_params = true,
                         },
+                        mccabe = {
+                            enabled = false,
+                            threshold = 10,
+                        }
                     },
                 },
             },
