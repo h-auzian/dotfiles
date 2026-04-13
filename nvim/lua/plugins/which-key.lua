@@ -62,7 +62,10 @@ return {
                     ["-"] = { ":split<CR>", "New horizontal split" },
                     ["|"] = { ":vsplit<CR>", "New vertical split" },
 
-                    a = { ":CenterBuffer<CR>", "Center current buffer" },
+                    ["a"] = { ":Centerpad<CR>", "Toggle center current buffer" },
+                    ["1"] = { ":Centerpad 25<CR>", "Center current buffer (small padding)" },
+                    ["2"] = { ":Centerpad 40<CR>", "Center current buffer (medium padding)" },
+                    ["3"] = { ":Centerpad 55<CR>", "Center current buffer (large padding)" },
 
                     i = { "<C-w>k", "Go up" },
                     j = { "<C-w>h", "Go left" },
