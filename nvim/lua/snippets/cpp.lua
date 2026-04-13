@@ -26,6 +26,11 @@ local iostream_snippet = ls.s(
     fmt("#include <iostream>", {})
 )
 
+local todo_snippet = ls.s(
+    "td-",
+    fmt("// TODO: ", {})
+)
+
 local snippets = {}
 local autosnippets = {
     print_snippet,
@@ -33,6 +38,7 @@ local autosnippets = {
     doc_comment_snippet,
     pragma_once_snippet,
     iostream_snippet,
+    todo_snippet,
 }
 
 return snippets, autosnippets
