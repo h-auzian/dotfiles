@@ -1,12 +1,12 @@
 [mgr]
 ratio = [ 1, 2, 2 ]
 show_hidden = true
-linemode = "custom_linemode"
+linemode = "custom"
 scrolloff = 99
 
 [opener]
 play_playlist = [
-    { run = 'mpv "$@"', desc = "Play as playlist", block = false }
+    { run = 'mpv --force-window "$@"', desc = "Play as playlist", orphan = true }
 ]
 
 edit_text_file = [

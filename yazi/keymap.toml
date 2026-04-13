@@ -3,9 +3,14 @@ prepend_keymap = [
     # Smart enter.
     { on = "o", run = "plugin smart-enter", desc = "Enter the child directory or open the file" },
 
+    # Line modes.
+    { on = [ "m", "c" ], run = "linemode custom", desc = "Linemode: custom" },
+
     # Navigation.
     { on = "j", run = "leave", desc = "Go back to the parent directory" },
     { on = "l", run = "enter", desc = "Enter the child directory" },
+    { on = "<C-j>", run = "back", desc = "Back to previous directory" },
+    { on = "<C-l>", run = "forward", desc = "Forward to next directory" },
     { on = "i", run = "arrow -1", desc = "Move cursor up" },
     { on = "k", run = "arrow 1",  desc = "Move cursor down" },
     { on = "<C-u>", run = "arrow -50%",  desc = "Move up half a page" },
@@ -15,7 +20,16 @@ prepend_keymap = [
     { on = [ "g", "p" ], run = 'shell "/snap/yazi/current/ya emit cd \"$(xclip -selection clipboard -o)\""', desc = "Go to path from clipboard" },
     { on = "<A-f>", run = 'shell --block "/snap/yazi/current/ya emit cd \"$(~/.config/scripts/fzf-env-paths.sh)\""', desc = "Go to directory from fzf" },
 
-    # Other.
+    # Bookmarks.
+    { on = [ "ñ", "d" ], run = [ 'cd ~/Downloads/', "sort mtime --reverse=yes" ] },
+    { on = [ "ñ", "z" ], run = 'cd /media/hans/' },
+    { on = [ "ñ", "p" ], run = 'cd ~/Dropbox/' },
+    { on = [ "ñ", "h" ], run = 'cd ~/Hans/' },
+    { on = [ "ñ", "c" ], run = 'cd ~/Hans/Compartido/' },
+    { on = [ "ñ", "m" ], run = 'cd ~/Hans/Música/' },
+    { on = [ "ñ", "q" ], run = 'cd ~/Hans/Proyectos/Programación/' },
+
+    # Delete.
     { on = "d", run = "remove --permanently", desc = "Permanently delete selected files" },
     { on = "D", run = "remove", desc = "Trash selected files" },
 
@@ -29,4 +43,26 @@ prepend_keymap = [
     { on = "<C-w>", run = "close", desc = "Close the current tab" },
     { on = "<C-Backtab>", run = "tab_switch -1 --relative",  desc = "Switch to the previous tab" },
     { on = "<C-Tab>", run = "tab_switch 1 --relative", desc = "Switch to the next tab" },
+    { on = "<A-S-u>", run = "tab_switch 0", desc = "Switch to the first tab" },
+    { on = "<A-S-i>", run = "tab_switch 1", desc = "Switch to the second tab" },
+    { on = "<A-S-o>", run = "tab_switch 2", desc = "Switch to the third tab" },
+    { on = "<A-S-p>", run = "tab_switch 3", desc = "Switch to the fourth tab" },
+
+    # Misc.
+    { on = "e", run = 'shell "mkdir -p \"${1%.*}\" && 7z x \"$1\" -o\"${1%.*}\" -aoa" --block', desc = "Extract into subfolder" },
+    { on = [ "ñ", "ñ" ], run = 'shell --block "~/.config/scripts/tmux-fzf-session.sh %d"', desc = "Create tmux session from the current folder" },
+]
+
+[pick]
+prepend_keymap = [
+    # Navigation.
+    { on = "i", run = "arrow prev", desc = "Move cursor up" },
+    { on = "k", run = "arrow next",  desc = "Move cursor down" },
+]
+
+[spot]
+prepend_keymap = [
+    # Navigation.
+    { on = "i", run = "arrow prev", desc = "Move cursor up" },
+    { on = "k", run = "arrow next",  desc = "Move cursor down" },
 ]
