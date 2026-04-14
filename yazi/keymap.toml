@@ -50,7 +50,7 @@ prepend_keymap = [
 
     # Misc.
     { on = "e", run = 'shell "mkdir -p \"${1%.*}\" && 7z x \"$1\" -o\"${1%.*}\" -aoa" --block', desc = "Extract into subfolder" },
-    { on = [ "ñ", "ñ" ], run = 'shell --block "~/.config/scripts/tmux-fzf-session.sh %d"', desc = "Create tmux session from the current folder" },
+    { on = [ "ñ", "ñ" ], run = 'shell --block "~/.config/scripts/tmux-fzf-session.sh $PWD"', desc = "Create tmux session from the current folder" },
 ]
 
 [pick]
