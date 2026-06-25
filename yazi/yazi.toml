@@ -10,7 +10,7 @@ play_playlist = [
 ]
 
 edit_text_file = [
-    { run = '$HOME/Applications/nvim.appimage "$@"', desc = "Edit text file", block = true }
+    { run = 'nvim "$@"', desc = "Edit text file", block = true }
 ]
 
 [open]
