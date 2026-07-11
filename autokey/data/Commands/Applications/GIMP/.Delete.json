@@ -24,7 +24,7 @@
         "hotKey": "d"
     },
     "filter": {
-        "regex": "gimp-2.10.Gimp-2.10",
+        "regex": "org.gimp.GIMP.Stable.Org.gimp.GIMP.Stable",
         "isRecursive": false
     }
 }
