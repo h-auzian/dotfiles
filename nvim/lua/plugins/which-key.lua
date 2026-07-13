@@ -148,6 +148,12 @@ return {
                         name = "Close buffer without saving",
                         w = { ":bw!<CR>", "Confirm" },
                     },
+                    s = {
+                        name = "Spellchecker",
+                        s = { ":set spell!<CR>", "Toggle spellchecker" },
+                        a = { "zg", "Add word" },
+                        d = { "zw", "Remove word" },
+                    },
                 },
 
                 c = {

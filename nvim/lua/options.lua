@@ -25,6 +25,8 @@ o.smartcase = true
 o.clipboard = "unnamedplus"
 
 o.spelllang = "en,es"
+o.spell = true
+
 o.swapfile = false
 o.backupcopy = "yes"
 

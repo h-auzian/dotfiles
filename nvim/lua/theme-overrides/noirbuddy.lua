@@ -103,6 +103,8 @@ vim.api.nvim_set_hl(0, "IndentBlankLineSpaceChar", { fg = colors.noir_1 })
 
 vim.api.nvim_set_hl(0, "WinSeparator", { bg = nil, fg = colors.noir_8 })
 
+vim.api.nvim_set_hl(0, "SpellBad", { fg = colors.red })
+
 -- Disable LSP semantic highlights.
 for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
     vim.api.nvim_set_hl(0, group, {})
