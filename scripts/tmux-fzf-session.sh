@@ -10,7 +10,7 @@
 # directory. The list of paths are read from an environment variable.
 
 # Retrieve possible parameters.
-total_windows=4
+total_windows=5
 initial_window=1
 session_name=''
 
@@ -61,8 +61,6 @@ session_name=$(echo $session_name | tr -d .)
 # If a session with said name doesn't exist, create it according to the
 # received parameters.
 if ! tmux has-session -t "=$session_name" 2> /dev/null; then
-
-    # Create the session.
     tmux new-session -ds "$session_name" -c "$selected_path"
 
     # Create the specified number of windows.
@@ -70,11 +68,14 @@ if ! tmux has-session -t "=$session_name" 2> /dev/null; then
         tmux new-window -t "$session_name" -c "$selected_path"
     done
 
-    # Open neovim on the first window.
-    tmux send-keys -t "$session_name":1 'nvim' Enter
+    # Open applications on specific windows.
+    tmux send-keys -t "$session_name":1 "nvim" C-m
 
-    # Open lazygit on the fourth window.
-    tmux send-keys -t "$session_name":4 'lazygit' Enter
+    tmux send-keys -t "$session_name":4 "lazygit" C-m
+    tmux rename-window -t "$session_name":4 "git"
+
+    tmux send-keys -t "$session_name":5 "ttui" C-m
+    tmux rename-window -t "$session_name":5 "tasks"
 
     # Switch to the newly created session on the specified window.
     tmux switch-client -t "$session_name":$initial_window
