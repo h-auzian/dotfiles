@@ -21,6 +21,10 @@ get_temp_string () {
         icon=󰖨
     elif [ $weather = "Clouds" ]; then
         icon=󰅟
+    elif [ $weather = "Rain" ]; then
+        icon=
+    elif [ $weather = "Haze" ]; then
+        icon=󰼰
     fi
 
     echo "$icon $temp°C"
