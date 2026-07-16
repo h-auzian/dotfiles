@@ -57,4 +57,9 @@ curl -s "$ENDPOINT/weather?lat=$LAT&lon=$LON&units=metric&appid=$API_KEY" | jq >
 CURRENT_WEATHER=$(cat $CURRENT_FILE \
     | jq -c '{temp: .main.temp|round, weather: .weather[].main}')
 
+if [[ -z $CURRENT_WEATHER ]]; then
+    echo "ERR"
+    exit 1
+fi
+
 echo $(get_temp_string "$CURRENT_WEATHER")
