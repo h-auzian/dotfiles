@@ -9,6 +9,7 @@ return {
                 "c",
                 "cmake",
                 "cpp",
+                "devicetree",
                 "glsl",
                 "go",
                 "javascript",
