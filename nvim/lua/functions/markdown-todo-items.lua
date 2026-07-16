@@ -26,8 +26,8 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.keymap.set("n", leader .. "a", ":MarkdownSetTodoItem<CR>", opts)
         vim.keymap.set("n", leader .. "s", ":MarkdownSetTodoItem /<CR>", opts)
         vim.keymap.set("n", leader .. "d", ":MarkdownSetTodoItem x<CR>", opts)
-        vim.keymap.set("n", leader .. "w", ":MarkdownSetTodoItem -<CR>", opts)
-        vim.keymap.set("n", leader .. "q", ":MarkdownRemoveTodoItem<CR>", opts)
+        vim.keymap.set("n", leader .. "q", ":MarkdownSetTodoItem -<CR>", opts)
+        vim.keymap.set("n", leader .. "w", ":MarkdownRemoveTodoItem<CR>", opts)
     end
 })
 
@@ -41,9 +41,7 @@ vim.api.nvim_create_user_command("MarkdownSetTodoItem", function(args)
 
     vim.cmd(":s:" .. PATTERN .. ":- \\[" .. status .. "\\] :e")
     vim.cmd("noh")
-end, {
-    nargs = "?",
-})
+end, { nargs = "?" })
 
 -- Removes the square bracket box for this list item.
 vim.api.nvim_create_user_command("MarkdownRemoveTodoItem", function(args)
