@@ -15,22 +15,27 @@ else
     curent_index=$(wmctrl -d | grep '*' | cut -d ' ' -f1)
 fi
 
+# Start the application depending on the current desktop/workspace.
 if [ $curent_index -eq 0 ]; then
-    firefox
+    firefox &
 elif [ $curent_index -eq 1 ]; then
-    kitty
+    kitty &
 elif [ $curent_index -eq 2 ]; then
-    kitty yazi
+    kitty yazi &
 elif [ $curent_index -eq 3 ]; then
-    dbeaver-ce
+    gimp &
 elif [ $curent_index -eq 4 ]; then
-    postman
+    dbeaver-ce &
 elif [ $curent_index -eq 5 ]; then
-    firefox
+    firefox &
 elif [ $curent_index -eq 6 ]; then
-    spotify
+    spotify &
 elif [ $curent_index -eq 7 ]; then
-    firefox
+    firefox &
 elif [ $curent_index -eq 8 ]; then
-    firefox
+    steam &
+elif [ $curent_index -eq 9 ]; then
+    firefox &
+elif [ $curent_index -eq 10 ]; then
+    kitty btop &
 fi
