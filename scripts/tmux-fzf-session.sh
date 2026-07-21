@@ -77,6 +77,14 @@ if ! tmux has-session -t "=$session_name" 2> /dev/null; then
     tmux send-keys -t "$session_name":5 "ttui" C-m
     tmux rename-window -t "$session_name":5 "tasks"
 
+    # If the current path is mapped to a notes path, create an additional
+    # window in that location.
+    notes_location="$(~/.config/scripts/get-project-notes-path.sh $selected_path)"
+    if [[ -n "$notes_location" ]]; then
+        tmux new-window -t "$session_name" -c "$notes_location" -n "notes"
+        tmux send-keys -t "$session_name":6 "nvim" C-m
+    fi
+
     # Switch to the newly created session on the specified window.
     tmux switch-client -t "$session_name":$initial_window
 

@@ -31,6 +31,9 @@ paths+=$(find ~/Hans/Proyectos/Terceros/ -mindepth 1 -maxdepth 1 -type d)"\n"
 paths+=$(find ~/Hans/Trabajo/ -mindepth 1 -maxdepth 3 -type d)"\n"
 export FZF_PATHS=$paths
 
+# Path for the project notes folder.
+export PROJECT_NOTES_PATH="$HOME/Dropbox/Project notes"
+
 # Path for wallpaper folder.
 export WALLPAPER_FOLDER=~/Dropbox/Fondos/
 
