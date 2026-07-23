@@ -20,8 +20,8 @@ return {
                 p = {
                     name = "Buffer navigation / Search",
                     d = { ":Telescope find_files hidden=true no_ignore=true<CR>", "Open buffer" },
-                    e = { ":Telescope lsp_document_symbols<CR>", "Search symbols" },
-                    r = { ":Telescope treesitter default_text=function<CR>", "Search functions" },
+                    e = { ":Telescope aerial<CR>", "Search functions and methods in current buffer" },
+                    r = { ":Telescope lsp_workspace_symbols<CR>", "Search all workspace symbols" },
                     f = { ":Telescope current_buffer_fuzzy_find<CR>", "Find in current buffer" },
                     g = { ":Telescope live_grep hidden=true<CR>", "Find on all files" },
                     s = { ":Telescope grep_string hidden=true<CR>", "Find word" },
