@@ -18,16 +18,15 @@ prepend_keymap = [
 
     # Go to.
     { on = [ "g", "p" ], run = 'shell "/snap/yazi/current/ya emit cd \"$(xclip -selection clipboard -o)\""', desc = "Go to path from clipboard" },
-    { on = "<A-f>", run = 'shell --block "/snap/yazi/current/ya emit cd \"$(~/.config/scripts/fzf-env-paths.sh)\""', desc = "Go to directory from fzf" },
 
     # Bookmarks.
-    { on = [ "ñ", "d" ], run = [ 'cd ~/Downloads/', "sort mtime --reverse=yes" ] },
-    { on = [ "ñ", "z" ], run = 'cd /media/hans/' },
-    { on = [ "ñ", "p" ], run = 'cd ~/Dropbox/' },
-    { on = [ "ñ", "h" ], run = 'cd ~/Hans/' },
-    { on = [ "ñ", "c" ], run = 'cd ~/Hans/Compartido/' },
-    { on = [ "ñ", "m" ], run = 'cd ~/Hans/Música/' },
-    { on = [ "ñ", "q" ], run = 'cd ~/Hans/Proyectos/Programación/' },
+    { on = [ "<A-Ñ>", "d" ], run = [ 'cd ~/Downloads/', "sort mtime --reverse=yes" ] },
+    { on = [ "<A-Ñ>", "z" ], run = 'cd /media/' },
+    { on = [ "<A-Ñ>", "m" ], run = 'cd /media/central/media/Música/' },
+    { on = [ "<A-Ñ>", "p" ], run = 'cd ~/Dropbox/' },
+    { on = [ "<A-Ñ>", "h" ], run = 'cd ~/Hans/' },
+    { on = [ "<A-Ñ>", "c" ], run = 'cd ~/Hans/Compartido/' },
+    { on = [ "<A-Ñ>", "q" ], run = 'cd ~/Hans/Proyectos/Programación/' },
 
     # Delete.
     { on = "d", run = "remove --permanently", desc = "Permanently delete selected files" },
@@ -50,7 +49,8 @@ prepend_keymap = [
 
     # Misc.
     { on = "e", run = 'shell "mkdir -p \"${1%.*}\" && 7z x \"$1\" -o\"${1%.*}\" -aoa" --block', desc = "Extract into subfolder" },
-    { on = [ "ñ", "ñ" ], run = 'shell --block "~/.config/scripts/tmux-fzf-session.sh $PWD"', desc = "Create tmux session from the current folder" },
+    { on = [ "<A-Ñ>", "<A-Ñ>" ], run = 'shell --block "/snap/yazi/current/ya emit cd \"$(~/.config/scripts/fzf-env-paths.sh)\""', desc = "Go to directory from fzf script" },
+    { on = [ "<A-Ñ>", "<A-f>" ], run = 'shell --block "~/.config/scripts/tmux-fzf-session.sh \"$PWD"\"', desc = "Create tmux session from the current folder" },
 ]
 
 [pick]
